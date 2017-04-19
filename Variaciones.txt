@@ -1,0 +1,7 @@
+Variacion Seleccion : 1
+Variacion Probabilidades : 4
+Variacion Extra : 3
+
+1: Usando un campo de texto (donde ingresa piedra, papel o tijera textualmente).
+4: Si la anterior fue tijera cambia siempre a piedra, sino elige al azar entre las tres con igual probabilidad.
+3: Cada partida se inserta en una tabla con las columnas “número de partida” y “ganador” (computadora/humano).	

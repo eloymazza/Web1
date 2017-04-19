@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fila{
+    width: 100vw;
+    margin-bottom: 20px;
+}
+
+header {
+    border:  solid black 1px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.contenedor-tabla{
+    height: 250px;
+    width: 250px;
+    overflow: scroll;
+    border: solid black 5px;
+}
