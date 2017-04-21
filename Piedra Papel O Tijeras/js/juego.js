@@ -4,13 +4,15 @@ const piedra = 0;
 const papel = 1;
 const tijera = 2;
 
-// Valores para generar la matriz de gana/pierde de cada elemento. Tambien para saber si el p1 gano o perdió. 
+// Sirve para indicar que se ingreso un valor invalido.
 const invalido = -1; 
+// Valores para generar la matriz de gana/pierde de cada elemento. Tambien para saber si el p1 gano o perdió. 
 const pierde = -1;
 const gana = 1;
 const empata = 0;
 
 // Arreglos para guardar los valors de gana/pierde que conformaran la matriz.
+// El primer indice es piedra, el segundo pepel, el tercero tijera.
 const propPiedra = [empata, pierde, gana];
 const propPapel = [gana, empata, pierde];
 const propTijera = [pierde, gana, empata];
@@ -27,24 +29,30 @@ let puntuacionPc = 0;
 // Obtengo el cuerpo de la tabla para insetarle elementos luego.
 let cuerpoTabla = document.getElementById("cuerpoTabla");
 
+// Estas variables sirven para guardar las elecciones en tipo string de cada jugador.
+let elementoP1 = "";
+let elementoPc = "";
+
+// Esta variable sirve para indicar si el modo injusto esta activado o no.
+let modoInjusto = false;
+
 // Setea lo necesario para que la ronda comienze y la rondaW ejecuta la funcion "jugar"
 function setearRonda() {
-  
+
   let miEleccion;
   let entrada =  document.getElementById("seleccion").value;
-
+  elementoP1 = entrada;
   miEleccion = transformarEleccion(entrada);
-
   // Si la eleccion no es ni piedra, papel o tijera, envia un alert y cancela la inicializacion de la ronda.
   if(!validarEleccion(miEleccion)){
       alert("Valor invalido, debes elegir entre piedra, papel, o tijera");
       return;
-  }
-  
+   }  
   // La pc elige su elemento.
  let eleccionPc = elegirPc(anteriorPc);
  anteriorPc = eleccionPc;
-
+ // Transformo a String la eleccion de la pc
+ elementoPc = transformarEnString(eleccionPc);
  // Comienza la ronda  
  jugarRonda(miEleccion, eleccionPc);
  numeroPartida++;
@@ -53,8 +61,9 @@ function setearRonda() {
 
 // Transforma la entrada de String a integer para poder validarla y luego comparar con la matriz de pierde/gana
 function transformarEleccion(entrada) {
+
+    entrada = entrada.toLowerCase();
     
-    entrada.toLowerCase();
     switch (entrada) {
         case "piedra": return piedra; 
         case "papel": return papel;
@@ -64,13 +73,22 @@ function transformarEleccion(entrada) {
 
 }
 
+// Transforma la eleccion de la pc en string para poder mostrarla al cliente
+function transformarEnString(eleccion) {
+    switch (eleccion) {
+        case 0: return "Piedra";
+        case 1: return "Papel";
+        case 2: return "Tijera";
+    }
+}
+
 function validarEleccion(eleccion) {
     return eleccion > -1;
 }
 
 // Elige pc: Si en la anterior la pc elegio tijera, elige si o si piedra. Sino elige un elemento al azar
 function elegirPc(anteriorPc) {
-    if(anteriorPc === tijera){
+    if(modoInjusto && anteriorPc === tijera){
         return piedra;
     }
     return (Math.floor(Math.random()*3));
@@ -100,15 +118,16 @@ function actualizarTabla(ganador) {
 
     cuerpoTabla.innerHTML += "<tr>" + 
             "<td>" + numeroPartida + "</td>" +
+            "<td>" + elementoP1 + "</td>" +
+            "<td>" + elementoPc + "</td>" +
             "<td>" + ganador + "</td>" +
         "</tr>";  
 }
 
 // Resetea la tabla de partidas
 function reset() {
-    
     cuerpoTabla.innerHTML = "";
-    
+    numeroPartida = 0;    
 }
 
 // Setea ronda de manera mas rapida solo apretando enter.
@@ -119,6 +138,8 @@ function seleccionRapida() {
     if(event.code === "Enter"){
         setearRonda();
     }
-
 }
 
+function cambiarDificultad() {
+    modoInjusto = !modoInjusto;
+}

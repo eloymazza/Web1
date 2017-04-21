@@ -17,7 +17,7 @@ header {
 
 .contenedor-tabla{
     height: 250px;
-    width: 250px;
+    width: 300px;
     overflow: scroll;
     border: solid black 5px;
 }

@@ -17,6 +17,8 @@
                 <table>
                     <thead>
                         <th>N° de Partida</th>
+                        <th>Elecc. P1</th>
+                        <th>Elecc. PC</th>
                         <th>Ganador</th>
                         <tbody id="cuerpoTabla">
                         </tbody>       
@@ -29,6 +31,10 @@
             <label for="seleccion">Ingrese su eleccion:  </label>
             <input type="text" name="seleccion" value="" placeholder="Piedra, papel o tijera" id="seleccion">
             <button type="button" onclick="setearRonda()">Selecionar</button>
+            <label for="dificultad">
+                <input type="checkbox" name="dificultad" onclick="cambiarDificultad(this.value)" >
+                Activar modo Injusto
+            </label>
         </section>
 
     <script type="text/javascript" src="js/juego.js"></script>
