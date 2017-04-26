@@ -2,44 +2,89 @@ body{
     margin: 0px;
     padding: 0px;
 }
-
-.contenedor{
+.fila{
     border: 3px solid black;  
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center; 
+    width: 100%;
 }
-
 header{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 75px;
+}
+.imagenes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px;
+}
+.marco-imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: solid black 1px;
+    background-color: lightblue;
+    height: 300px;
+    width: 350px;
+    padding: 20px;
+}
+.contenedor-imagen{
+    border: solid black 1px;
+    width: 90%;
+    height: 80%;
+    margin-bottom: 10px;
+    background: white;
 }
 
+.contenedor-nombre{
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: centeR; 
+    height: 12%;
+    width: 50%;
+}
 .contador{
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
-
 .contador table, .contador td {
   border : solid black 1px;  
 }
-
-table {
+.contador table {
     text-align: center;
-    width: 400px;
-    height:60px;
+    width: 150px;
+    height: 50px;
+}
+.contador-vs-jugar{
+    border: solid black 1px;
+    width: 310px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+}
+.contador-vs-jugar div{
+    border: solid black 1px;
+    height: 33%;
+    width: 100%;
 }
 
-td {
-
-    margin: 10px; 
-
+.vs, .jugar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-
+.jugar button {
+    height: 40px;
+    width: 50%;
+    margin-top: 30px;
+}
 
 
 
