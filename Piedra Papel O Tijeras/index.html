@@ -7,35 +7,67 @@
         <link href="css/main.css" rel="stylesheet">
     </head>
     <body>
-        <div class="fila">
+     <!--Header -->
+     <div class="contenedor">
+        <div class="header">
             <header>
                 <h1>Piedra, papel o tijera</h1>
-            </header>
+            </header>                      
         </div>
-        <section>
-            <div class="contenedor-tabla">
-                <table>
-                    <thead>
-                        <th>N° de Partida</th>
-                        <th>Elecc. P1</th>
-                        <th>Elecc. PC</th>
-                        <th>Ganador</th>
-                        <tbody id="cuerpoTabla">
-                        </tbody>       
-                    </thead>
-                </table>
+     </div>
+     <!--Contador-->
+     <div class="contenedor">
+        <div class="contador">
+            <table>
+                <thead>
+                    <th>P1</th>
+                    <th>Pc</th>
+                </thead>
+                <tbody>
+                  <td id="puntuacionP1">
+                    0
+                  </td>
+                  <td id="puntuacionPc">
+                    0
+                  </td>
+                </tbody>
+            </table>
+        </div>
+     </div>
+ 
+        <!-- 
+        <div>
+            <div class="contenedor-imagen">
+                <img src="" alt="jugador1">
+                <img src="" alt="pc">
             </div>
-            <button type="button" id="reset" onclick="reset()">Reset</button>
-        </section>
-        <section class="fila">
+        </div>    
+        
+        <div class="contenedor-tabla">
+            <table>
+                <thead>
+                    <th>N° de Partida</th>
+                    <th>Elecc. P1</th>
+                    <th>Elecc. PC</th>
+                    <th>Ganador</th>
+                    <tbody id="cuerpoTabla">
+                    </tbody>       
+                </thead>
+            </table>
+        </div>
+        <button type="button" id="reset" onclick="reset()">Reset</button>
+        </div>
+        
+        <div class="fila">
             <label for="seleccion">Ingrese su eleccion:  </label>
             <input type="text" name="seleccion" value="" placeholder="Piedra, papel o tijera" id="seleccion">
             <button type="button" onclick="setearRonda()">Selecionar</button>
             <label for="dificultad">
-                <input type="checkbox" name="dificultad" onclick="cambiarDificultad(this.value)" >
+                <input type="checkbox" name="dificultad" onclick="cambiarDificultad()" >
                 Activar modo Injusto
             </label>
-        </section>
+        </div>
+        -->
 
     <script type="text/javascript" src="js/juego.js"></script>
     </body>

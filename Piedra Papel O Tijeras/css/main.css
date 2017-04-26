@@ -1,23 +1,45 @@
 body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenedor{
+    border: 3px solid black;  
+    margin-bottom: 15px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center; 
 }
 
-.fila{
-    width: 100vw;
-    margin-bottom: 20px;
-}
-
-header {
-    border:  solid black 1px;
+header{
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.contador{
+    display: flex;
+    align-items: center;
+}
+
+.contador table, .contador td {
+  border : solid black 1px;  
+}
+
+table {
+    text-align: center;
+    width: 400px;
+    height:60px;
+}
+
+td {
+
+    margin: 10px; 
+
 }
 
 
-.contenedor-tabla{
-    height: 250px;
-    width: 300px;
-    overflow: scroll;
-    border: solid black 5px;
-}
+
+
+
+

@@ -34,8 +34,10 @@ let elementoP1 = "";
 let elementoPc = "";
 
 // Esta variable sirve para indicar si el modo injusto esta activado o no.
-let modoInjusto = false;
+let modoPredecible = false;
 
+let contadorP1 = document.getElementById("puntuacionP1");
+let contadorPc = document.getElementById("puntuacionPc");
 // Setea lo necesario para que la ronda comienze y la rondaW ejecuta la funcion "jugar"
 function setearRonda() {
 
@@ -88,7 +90,7 @@ function validarEleccion(eleccion) {
 
 // Elige pc: Si en la anterior la pc elegio tijera, elige si o si piedra. Sino elige un elemento al azar
 function elegirPc(anteriorPc) {
-    if(modoInjusto && anteriorPc === tijera){
+    if(modoPredecible && anteriorPc === tijera){
         return piedra;
     }
     return (Math.floor(Math.random()*3));
@@ -102,11 +104,13 @@ function jugarRonda(eleccionP1, eleccionPc){
     let resultado = matriz[eleccionP1][eleccionPc];
     if(resultado === 1){
         puntuacionP1++;
+        contadorP1.innerText = puntuacionP1;
         actualizarTabla("Jugador")
     }
     else if(resultado === -1){
         puntuacionPc++;
         actualizarTabla("Pc");
+        contadorPc.innerText = puntuacionPc;
     }
     else{
         actualizarTabla("Empate");
@@ -127,7 +131,11 @@ function actualizarTabla(ganador) {
 // Resetea la tabla de partidas
 function reset() {
     cuerpoTabla.innerHTML = "";
-    numeroPartida = 0;    
+    numeroPartida = 0;  
+    puntuacionP1 = 0;
+    puntuacionPc = 0;
+    contadorP1.innerText = 0;
+    contadorPc.innerText = 0;  
 }
 
 // Setea ronda de manera mas rapida solo apretando enter.
@@ -141,5 +149,5 @@ function seleccionRapida() {
 }
 
 function cambiarDificultad() {
-    modoInjusto = !modoInjusto;
+    modoPredecible = !modoPredecible;
 }
