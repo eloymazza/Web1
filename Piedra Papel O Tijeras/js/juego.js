@@ -45,6 +45,7 @@ function setearRonda() {
   let entrada =  document.getElementById("seleccion").value;
   elementoP1 = entrada;
   miEleccion = transformarEleccion(entrada);
+  document.getElementById("imagenP1").src = "css/images/" + miEleccion + ".png";
   // Si la eleccion no es ni piedra, papel o tijera, envia un alert y cancela la inicializacion de la ronda.
   if(!validarEleccion(miEleccion)){
       alert("Valor invalido, debes elegir entre piedra, papel, o tijera");
@@ -52,9 +53,11 @@ function setearRonda() {
    }  
   // La pc elige su elemento.
  let eleccionPc = elegirPc(anteriorPc);
+ document.getElementById("imagenPc").src = "css/images/" + eleccionPc + ".png";
  anteriorPc = eleccionPc;
  // Transformo a String la eleccion de la pc
  elementoPc = transformarEnString(eleccionPc);
+ document.getElementById("nombreEleccionPc").innerText = elementoPc;
  // Comienza la ronda  
  jugarRonda(miEleccion, eleccionPc);
  numeroPartida++;
@@ -125,7 +128,7 @@ function actualizarTabla(ganador) {
             "<td>" + elementoP1 + "</td>" +
             "<td>" + elementoPc + "</td>" +
             "<td>" + ganador + "</td>" +
-        "</tr>";  
+        "</tr>";
 }
 
 // Resetea la tabla de partidas

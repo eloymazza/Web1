@@ -45,9 +45,20 @@ header{
     border: solid black 1px;
     display: flex;
     justify-content: center;
-    align-items: centeR; 
+    align-items: center; 
     height: 12%;
     width: 50%;
+}
+.contenedor-nombre input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 0; 
+    background: lightblue;          
+    color:  black;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px; 
 }
 .contador{
     display: flex;
@@ -61,6 +72,13 @@ header{
     width: 150px;
     height: 50px;
 }
+ 
+ .contenedor-imagen{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
 .contador-vs-jugar{
     border: solid black 1px;
     width: 310px;
@@ -74,17 +92,39 @@ header{
     width: 100%;
 }
 
-.vs, .jugar{
+.vs{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.jugar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .jugar button {
     height: 40px;
     width: 50%;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
+.contenedor-tabla{
+    width: 50%;
+    border: solid black 1px;
+    height: 200px;
+    overflow: scroll;
+}
+
+table, td, th, tr{
+    border: solid black 1px;   
+    text-align: center;  
+}
+th{
+    width: 300px;
+}
 
 
