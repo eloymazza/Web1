@@ -5,10 +5,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/main.css" rel="stylesheet">
+
     </head>
     <body>
      <!--Header -->
-     <div class="fila">
+     <div class="fila colorFondo">
         <div class="header">
             <header>
                 <h1>Piedra, papel o tijera</h1>
@@ -18,9 +19,9 @@
      <!-- Imagenes -->
      <div class="fila">
        <div class="imagenes">      
-         <div class="marco-imagen">
-           <div class="contenedor-imagen">
-             <img src="" alt="P1" id="imagenP1">  
+         <div class="marco-imagen sombra-A">
+           <div class="contenedor-imagen ">
+             <img src="css/images/signo.jpg" alt="P1" id="imagenP1">  
            </div>       
            <div class="contenedor-nombre">
                <input type="text" name="" value="" placeholder="Su eleccion" id="seleccion">
@@ -44,7 +45,7 @@
             </table>
             </div>
             <div class="vs">
-              <img src="" alt="vs">
+              <img src="css/images/vs.jpg" alt="vs">
             </div> 
             <div class="jugar">
               <button type="button"  onclick="setearRonda()">Jugar</button>
@@ -54,18 +55,19 @@
               </label>
             </div>
          </div>
-         <div class="marco-imagen">
+         <div class="marco-imagen sombra-B">
            <div class="contenedor-imagen">
-             <img src="" alt="Pc" id="imagenPc">  
+             <img src="css/images/signo.jpg" alt="Pc" id="imagenPc">  
            </div>       
            <div class="contenedor-nombre">
-               <h2 id="nombreEleccionPc">Piedra</h2>
+               <h2 id="nombreEleccionPc">Eleccion Pc</h2>
            </div>  
          </div>    
        </div>       
       </div>
-      <div class="fila">
-        <div class="contenedor-tabla">
+      <div class="fila colorFondo">
+       <div class="contenedor-tabla-boton">
+         <div class="contenedor-tabla">
         <table>
           <thead>
            <tr>
@@ -79,8 +81,10 @@
           </tbody>       
          </table>
        </div>
-      </div>   
        <button type="button" id="reset" onclick="reset()">Reset</button>
+      </div>
+       </div> 
+        
     <script type="text/javascript" src="js/juego.js"></script>
     </body>
 </html>

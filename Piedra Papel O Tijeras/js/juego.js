@@ -48,7 +48,9 @@ function setearRonda() {
   document.getElementById("imagenP1").src = "css/images/" + miEleccion + ".png";
   // Si la eleccion no es ni piedra, papel o tijera, envia un alert y cancela la inicializacion de la ronda.
   if(!validarEleccion(miEleccion)){
+
       alert("Valor invalido, debes elegir entre piedra, papel, o tijera");
+      document.getElementById("imagenP1").src = "css/images/error.png";
       return;
    }  
   // La pc elige su elemento.

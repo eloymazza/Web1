@@ -1,10 +1,32 @@
+*{
+    font-family: "Lunisolar";
+    font-weight: lighter;
+    -webkit-text-stroke: black 2px;
+    color: white;
+}
 body{
     margin: 0px;
     padding: 0px;
+    font-family: "Lunisolar";
+    font-weight: normal;
+}
+@font-face{
+    font-family: "Lunisolar";
+    src: url(fonts/Lunisolar.otf);
+}
+h1{
+    font-size: 60px;
+    font-weight: normal;
+}
+h2{
+    font-size: 30px;
+}
+.colorFondo{
+    background: #009688;
 }
 .fila{
     border: 3px solid black;  
-    margin-bottom: 10px;
+
     display: flex;
     justify-content: center; 
     width: 100%;
@@ -13,59 +35,70 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75px;
+    height: 100px;
 }
 .imagenes{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 20px;
+    margin-top: 50px;
+    margin-bottom: 80px;
 }
 .marco-imagen{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    border: solid black 1px;
-    background-color: lightblue;
+    background-color: #009688;
     height: 300px;
     width: 350px;
     padding: 20px;
+    border: solid black 4px;
+    
+}
+.sombra-A{
+    box-shadow: -7px 5px 5px black;
+}
+.sombra-B{
+    box-shadow: 7px 5px 5px black;
 }
 .contenedor-imagen{
-    border: solid black 1px;
     width: 90%;
     height: 80%;
     margin-bottom: 10px;
     background: white;
+    border: solid black 4px;
 }
 
 .contenedor-nombre{
-    border: solid black 1px;
+    border: solid black 2px;
     display: flex;
     justify-content: center;
     align-items: center; 
     height: 12%;
     width: 50%;
+    background: #4DB6AC;          
 }
 .contenedor-nombre input{
     height: 100%;
     width: 100%;
     border: none;
     padding: 0; 
-    background: lightblue;          
-    color:  black;
+    color:  white;
     text-align: center;
     font-weight: bolder;
-    font-size: 18px; 
+    background: #4DB6AC;  
+    -webkit-text-stroke: black 2px;
+    font-size: 30px;
 }
+
 .contador{
     display: flex;
     justify-content: center;
 }
-.contador table, .contador td {
-  border : solid black 1px;  
+.contador table {
+  border : solid black 5px;  
 }
 .contador table {
     text-align: center;
@@ -80,51 +113,64 @@ header{
  }
 
 .contador-vs-jugar{
-    border: solid black 1px;
     width: 310px;
     height: 340px;
     display: flex;
     flex-direction: column;
 }
 .contador-vs-jugar div{
-    border: solid black 1px;
     height: 33%;
     width: 100%;
 }
-
 .vs{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 40px;
 }
-
 .jugar{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
-
 .jugar button {
     height: 40px;
     width: 50%;
     margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 30px;
 }
-
 .contenedor-tabla{
-    width: 50%;
-    border: solid black 1px;
+    border: white 4px solid;
+    width: 60%;
     height: 200px;
     overflow: scroll;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    box-shadow:  0px 0px 0px 5px black;
+}
+.contenedor-tabla-boton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-table, td, th, tr{
-    border: solid black 1px;   
-    text-align: center;  
-}
 th{
     width: 300px;
+    font-size: 28px;
+    border-bottom: solid black 5px;
+    margin: 0px;
+    padding: 0px;
+}
+td{
+    text-align: center;
 }
 
-
+#reset {
+    height: 50px;
+    width: 30%;
+    font-size: 30px;
+    margin: 10px 0;
+}
