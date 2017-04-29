@@ -153,6 +153,6 @@ function seleccionRapida() {
     }
 }
 
-function cambiarDificultad() {
-    modoPredecible = !modoPredecible;
+function cambiarDificultad(checked) {
+    modoPredecible = checked;
 }

@@ -5,7 +5,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/main.css" rel="stylesheet">
-
     </head>
     <body>
      <!--Header -->
@@ -16,45 +15,50 @@
             </header>                      
         </div>
      </div>
-     <!-- Imagenes -->
+     <!-- Cuerpo del juego -->
      <div class="fila">
-       <div class="imagenes">      
-         <div class="marco-imagen sombra-A">
-           <div class="contenedor-imagen ">
-             <img src="css/images/signo.jpg" alt="P1" id="imagenP1">  
-           </div>       
-           <div class="contenedor-nombre">
-               <input type="text" name="" value="" placeholder="Su eleccion" id="seleccion">
-           </div>  
-         </div>
-         <div class="contador-vs-jugar">
-             <div class="contador">
-             <table>
-               <thead>
-                 <tr>
-                   <th>P1</th>
-                   <th>Pc</th>
-                 </tr>     
-               </thead>                    
-               <tbody>
-                 <tr>
-                   <td id="puntuacionP1">0</td>
-                   <td id="puntuacionPc">0</td>
-                 </tr>      
-               </tbody>
-            </table>
-            </div>
-            <div class="vs">
-              <img src="css/images/vs.jpg" alt="vs">
-            </div> 
-            <div class="jugar">
-              <button type="button"  onclick="setearRonda()">Jugar</button>
-              <label for="dificultad">
-              <input type="checkbox" name="dificultad" onclick="cambiarDificultad()" >
-              Activar modo Injusto
-              </label>
-            </div>
-         </div>
+      <div class="imagenes">      
+        <!-- Marco para Jugador 1-->
+        <div class="marco-imagen sombra-A">
+          <div class="contenedor-imagen ">
+            <img src="css/images/signo.jpg" alt="P1" id="imagenP1">  
+          </div>       
+          <div class="contenedor-nombre">
+            <input type="text" name="" value="" placeholder="Su eleccion" id="seleccion">
+          </div>  
+        </div>
+      <!-- Contador, imagen de versus, y boton jugar-->
+      <div class="contador-vs-jugar">
+       <div class="contador">
+        <!-- Tabla-contador -->
+        <table>
+          <thead>
+            <tr>
+            <th>P1</th>
+            <th>Pc</th>
+            </tr>     
+          </thead>                    
+        <tbody>
+            <tr>
+            <td id="puntuacionP1">0</td>
+            <td id="puntuacionPc">0</td>
+            </tr>      
+        </tbody>
+        </table>
+        </div>
+        <!-- Imagen de versus-->
+        <div class="vs">
+          <img src="css/images/vs.jpg" alt="vs">
+        </div> 
+        <!-- Boton jugar-->
+        <div class="jugar">
+          <button type="button"  onclick="setearRonda()">Jugar</button>
+          <label for="dificultad">
+            <input type="checkbox" name="dificultad" onclick="cambiarDificultad(checked)">
+             Activar modo Injusto
+          </label>
+        </div>
+        </div>
          <div class="marco-imagen sombra-B">
            <div class="contenedor-imagen">
              <img src="css/images/signo.jpg" alt="Pc" id="imagenPc">  
@@ -65,26 +69,29 @@
          </div>    
        </div>       
       </div>
+      <!-- Tabla de registro y boton-->
       <div class="fila colorFondo">
        <div class="contenedor-tabla-boton">
+         <!-- Tabla de registro--> 
          <div class="contenedor-tabla">
-        <table>
-          <thead>
-           <tr>
-            <th>N° de Partida</th>
-            <th>Eleccion P1</th>
-            <th>Eleccion PC</th>
-            <th>Ganador</th>
-           </tr>
-          </thead>
+          <table>
+            <thead>
+              <tr>
+              <th>N° de Partida</th>
+              <th>Eleccion P1</th>
+              <th>Eleccion PC</th>
+              <th>Ganador</th>
+              </tr>
+            </thead>
+            <!-- Aqui se pegan los resultados mediante js -->
           <tbody id="cuerpoTabla">
           </tbody>       
-         </table>
-       </div>
-       <button type="button" id="reset" onclick="reset()">Reset</button>
-      </div>
-       </div> 
-        
+          </table>
+         </div>
+         <button type="button" id="reset" onclick="reset()">Reset</button>
+        </div>
+       </div>     
+       
     <script type="text/javascript" src="js/juego.js"></script>
     </body>
 </html>
