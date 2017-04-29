@@ -19,7 +19,7 @@
      <div class="fila">
       <div class="imagenes">      
         <!-- Marco para Jugador 1-->
-        <div class="marco-imagen sombra-A">
+        <div class="marco-imagen sombra-A colorFondo">
           <div class="contenedor-imagen ">
             <img src="css/images/signo.jpg" alt="P1" id="imagenP1">  
           </div>       
@@ -29,9 +29,9 @@
         </div>
       <!-- Contador, imagen de versus, y boton jugar-->
       <div class="contador-vs-jugar">
-       <div class="contador">
+       <div class="contador " >
         <!-- Tabla-contador -->
-        <table>
+        <table class="colorFondo">
           <thead>
             <tr>
             <th>P1</th>
@@ -52,14 +52,14 @@
         </div> 
         <!-- Boton jugar-->
         <div class="jugar">
-          <button type="button"  onclick="setearRonda()">Jugar</button>
+          <button type="button"  onclick="setearRonda()" class="colorFondo">Jugar</button>
           <label for="dificultad">
             <input type="checkbox" name="dificultad" onclick="cambiarDificultad(checked)">
              Activar modo Injusto
           </label>
         </div>
         </div>
-         <div class="marco-imagen sombra-B">
+         <div class="marco-imagen sombra-B colorFondo">
            <div class="contenedor-imagen">
              <img src="css/images/signo.jpg" alt="Pc" id="imagenPc">  
            </div>       
@@ -73,9 +73,9 @@
       <div class="fila colorFondo">
        <div class="contenedor-tabla-boton">
          <!-- Tabla de registro--> 
-         <div class="contenedor-tabla">
+         <div class="contenedor-tabla sombra-B">
           <table>
-            <thead>
+            <thead class="colorFondo">
               <tr>
               <th>N° de Partida</th>
               <th>Eleccion P1</th>
@@ -88,7 +88,7 @@
           </tbody>       
           </table>
          </div>
-         <button type="button" id="reset" onclick="reset()">Reset</button>
+         <button type="button" id="reset" onclick="reset()" class="colorFondo">Reset</button>
         </div>
        </div>     
        
