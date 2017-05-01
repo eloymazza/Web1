@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.banner{
+    border: 1px solid black;
+    height: 200px;
+}
+.columnas-noticias{
+    border: 1px solid black;
+    display: flex;
+}
+.columna, .noticias{
+    border: 2px solid black;
+}
+.columna{
+    width: 15%;
+}
+.noticias{
+    width: 70%;
+}
+
+.nav{
+    display: flex;
+    height: 75px;
+    border: 2px black solid;
+    list-style: none;
+    margin-bottom: 30px;
+}
+.nav li{
+    border: 1px solid black;
+    width: 16.66%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fila{
+    margin-bottom: 30px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.noticia-principal{
+    border: 1px solid black;
+    width: 80%;
+    height: 300px;
+}
+.titulo{
+    text-align: left;
+    border: 1px solid black;
+    width: 80%;
+    margin: 10px 0px 30px 0px;
+}
+p {
+    margin-left: 5px;
+}
+.noticias{
+    justify-content: space-between;
+    width: 80%;
+    border: 1px solid black;
+}
+.contenedor-noticias-secundarias{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    border: 1px solid black;
+}
+.noticia{
+    width: 45%;
+    height: 340px;
+    border: 1px solid black;
+    margin-bottom: 40px;
+}
+
+.noticia img{
+    width: 100%;
+    height: 65%;
+}
+.indice-noticia{
+    text-align: right;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.titulo-formulario{
+    border: 1px solid black;
+    margin: 15px 0px;
+}
+.formulario{
+    width: 63%;
+    height: 300px;
+    border: solid black 1px;
+  /* background-image: url("file:///C:/Users/Usuario/Desktop/Web1/La%20voz%20de%20la%20Plebe/css/images/formulario.jpg");*/
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
