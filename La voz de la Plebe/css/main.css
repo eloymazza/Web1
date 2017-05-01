@@ -86,12 +86,50 @@ p {
 .titulo-formulario{
     border: 1px solid black;
     margin: 15px 0px;
+    width: 50%;
 }
-.formulario{
-    width: 63%;
+form{
+    width: 50%;
     height: 300px;
+    padding: 20px;
+    box-sizing: border-box;
     border: solid black 1px;
-  /* background-image: url("file:///C:/Users/Usuario/Desktop/Web1/La%20voz%20de%20la%20Plebe/css/images/formulario.jpg");*/
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    display: flex;
+}
+.columna-formulario{
+    width: 50%;
+    height: 230px;
+    border: 1px solid black;
+    display: block;
+    padding: 8px;
+}
+
+label{
+    font-size: 20px;
+}
+select, input{
+    width: 90%;
+    height: 25px;
+    margin: 5px 0;
+}
+select{
+    height: 30px;
+}
+.suplementos{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+.suplemento{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90px;
+}
+.checkbox, .radio {
+    width: 15px;    
+}
+.input-radio{
+    display: flex;
+    align-items: center;
 }
