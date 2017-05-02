@@ -30,9 +30,14 @@
 .nav li{
     border: 1px solid black;
     width: 16.66%;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+a{
+    text-decoration: none;
+    padding: 25px 60px;
 }
 .fila{
     margin-bottom: 30px;
@@ -90,20 +95,21 @@ p {
 }
 form{
     width: 50%;
-    height: 300px;
-    padding: 20px;
+    height: 460px;
+    padding: 15px;
     box-sizing: border-box;
     border: solid black 1px;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .columna-formulario{
-    width: 50%;
-    height: 230px;
-    border: 1px solid black;
+    width: 45%;
+    height: 206px;
     display: block;
     padding: 8px;
+    
 }
-
 label{
     font-size: 20px;
 }
@@ -132,4 +138,26 @@ select{
 .input-radio{
     display: flex;
     align-items: center;
+    height: 67px;
+}
+.margen-hombre{
+    margin-right: 40px;
+}
+.contenedor-textarea-submit{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 70%;
+    height: 210px;
+
+}
+textarea{
+    margin-bottom: 2px;
+    resize: none;
+}
+.contenedor-textarea-submit input{
+    width: 40%;
+    height: 30px;
 }
