@@ -18,6 +18,7 @@ tr{
 }
 td{
     padding: 5px;
+    text-align: center;
 }
 .celda-intermedia, .celda-chica{
     text-align: center;

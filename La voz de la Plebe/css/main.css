@@ -16,6 +16,7 @@ body{
     border: 1px solid black;
     height: 200px;  
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 .columnas-noticias{
     border: 1px solid black;
@@ -36,21 +37,36 @@ body{
 }
 .nav li{
     width: 16.45%;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.alineamiento-home{
+    padding-left: 28px;
+}
+.alineamiento-politica{
+    padding-left: 34px;
+}    
+.alineamiento-sociedad{
+    padding-left: 30px;    
+}  
+.alineamiento-economia, .alineamiento-coliseo, .alineamiento-judiciales{
+    padding-left: 37px; 
+}          
 .indicador-seccion{
     border: 1px solid black;
     width: 30%;
     text-align: center;
+    margin-top: 10px;
 }
-.indicador-seccion span{
+.indicador-seccion p{
     font-size: 25px;
 }
-span::before {
+.indicador-seccion::before {
     content: "Seccion ";
+    font-size: 25px;
 }
 .margen-home{
     margin-top: 15px;
@@ -58,7 +74,7 @@ span::before {
 a{
     text-decoration: none;
     padding-bottom: 15px;
-    padding-left: 20px;
+    color: black;
 }
 .fila{
     margin-bottom: 30px;
@@ -83,6 +99,14 @@ a{
 .cuerpo{
     width: 80%;
     border: 1px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.cuerpo h3{
+    margin-left: 5px;
+}
+p{
+    margin: 5px 0;
 }
 .titulo{
     text-align: left;
@@ -108,9 +132,7 @@ a{
     text-align: left;
     margin: 10px 0px;
 }
-p {
-    margin-left: 5px;
-}
+
 .seccion-noticias{
     justify-content: space-between;
     width: 60%;
@@ -125,22 +147,28 @@ p {
 }
 .noticia{
     width: 45%;
-    height: 360px;
     border: 1px solid black;
     margin-bottom: 40px;
-    padding: 5px;
+    padding: 10px;
+}
+.noticia h2{
+    margin-bottom: 5px;
 }
 .noticia h3{
     margin-left: 5px;
 }
-
+.resaltado{
+    font-weight: bold;
+}
+.enfasis{
+    font-style: italic;
+    font-weight: lighter;
+}
 .noticia img{
     width: 100%;
-    height: 65%;
+    height: 234px;
     margin-bottom: 10px;
 }
-
-
 .info-noticia{
     font-size: 12px;
     margin-top: 10px;
@@ -156,8 +184,19 @@ p {
 }
 .titulo-formulario{
     border: 1px solid black;
+    text-align: center;
     margin: 15px 0px;
-    width: 50%;
+    width: 70%;
+}
+.tips{
+    margin-top: 10px;
+}
+.tips h4{
+    margin-bottom: 5px;
+}
+.tips ol{
+    margin-left: 30px;
+    padding: 5px;
 }
 form{
     width: 70%;

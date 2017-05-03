@@ -13,31 +13,31 @@
     <!--Columnas y cuerpo-->
     <div class="columnas-noticias">
         <div class="columna">
-            <img src="css/images/decoraciones/Columna.png" alt="">
+            <img src="css/images/decoraciones/Columna.png" alt="columna">
         </div>
         <div class="seccion-noticias">
             <ul class="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="politica.html">Politica</a></li>
-                <li><a href="sociedad.html">Sociedad</a></li>
-                <li><a href="economia.html">Economia</a></li>
-                <li><a href="coliseo.html">Coliseo</a></li>
-                <li><a href="judiciales.html">Judiciales</a></li>
+                <li><a href="#" class="alineamiento-home">Home</a></li>
+                <li><a href="politica.html" class="alineamiento-politica">Politica</a></li>
+                <li><a href="sociedad.html" class="alineamiento-sociedad">Sociedad</a></li>
+                <li><a href="economia.html" class="alineamiento-economia">Economia</a></li>
+                <li><a href="coliseo.html" class="alineamiento-coliseo">Coliseo</a></li>
+                <li><a href="judiciales.html" class="alineamiento-judiciales">Judiciales</a></li>
             </ul>
             <div class="fila">
                 <div class="noticia-principal margen-home">
                     <img src="css/images/home/visigodos2.png" alt="Tratado Con los Visigodos"> 
                 </div>
                 <div class="titulo">
-                <h1>Tratados con los Visigodos</h1>
+                <h1><a href="politica.html#principal-politica">Tratados con los Visigodos</a></h1>
                 <div class="intro-principal">
                 <p>
                 “Los pueblos germánicos insisten que el tratado librecambista que propone Roma es unilateral”
                 </p>
                 </div>
                 <div class="info-noticia">
-                        <p>Teto Medina</p> 
-                        <p class="indice-noticia">Seccion Politica</p>
+                    <p>Teto Medina</p> 
+                    <p class="indice-noticia">Seccion Politica</p>
                 </div>
                 </div>
             </div> 
@@ -45,11 +45,11 @@
             <div class="fila ">
                 <div class="contenedor-noticias-secundarias">
                      <div class="noticia">
-                        <img src="css/images/home/caminos1.png" alt="5 emperadores">
-                        <h3>Falta de inversión en rutas</h3>
+                        <img src="css/images/home/caminos1.png" alt="Mal estado de los caminos">
+                        <h3><a href="economia.html#principal-economia">Falta de inversión en rutas</a></h3>
                         <div class="intro-secundaria">
                         <p>
-                         “Todos los caminos  conducían a Roma”
+                         “Todos los caminos conducían a Roma”
                         </p>
                         </div>
                         <div class="info-noticia">
@@ -58,8 +58,8 @@
                         </div>   
                     </div>
                     <div class="noticia">
-                        <img src="css/images/home/sin-cero.png" alt="sin-cero">
-                        <h3>Los problemas de no tener cero. </h3>
+                        <img src="css/images/home/sin-cero.png" alt="Los problemas de no tener cero">
+                        <h3><a href="sociedad.html#principal-economia">Los problemas de no tener cero</a></h3>
                         <div class="intro-secundaria">
                         <p>
                          “Hay que cambiar el sistema aditivo por el posicional”
@@ -71,8 +71,8 @@
                         </div>
                     </div>
                     <div class="noticia">
-                        <img src="css/images/home/maximo1.png" alt="noticia-secundaria">
-                        <h3>Duelo decisivo: Maximus Vs El Emperador</h3>
+                        <img src="css/images/home/maximo1.png" alt="Maximus versus el emperador">
+                        <h3><a href="coliseo.html#principal-coliseo">Duelo decisivo: Maximus Vs El Emperador</a></h3>
                         <div class="intro-secundaria">
                         <p>
                          "Se enfrentaran en una batalla de vida o muerte"
@@ -84,11 +84,11 @@
                         </div>
                     </div>
                     <div class="noticia">
-                        <img src="css/images/home/jesu1.png" alt="maximus-versus-el-emperador">
-                        <h3>Blasfemia y oportunismo</h3>
+                        <img src="css/images/home/jesu1.png" alt="Jesus falso">
+                        <h3><a href="judiciales.html#principal-judiciales">Blasfemia y oportunismo</a></h3>
                         <div class="intro-secundaria">
                         <p>
-                         Aparecen falsos Jesues por toda roma ante el malestar general
+                         Ante el malestar general, aparecen falsos Jesues por toda roma
                         </p>
                         </div>
                         <div class="info-noticia">
@@ -122,7 +122,7 @@
                      </div>
                      <div class="columna-formulario">
                        <label for="">Apellido:</label>
-                       <input type="text" name="nombre" value="" placeholder="Ingrese su apellido ">
+                       <input type="text" name="nombre" placeholder="Ingrese su apellido ">
                        <label for="">Estatus Social:</label>
                        <select>
                          <option value="Patricio">Patricio</option>
@@ -130,7 +130,7 @@
                          <option value="Esclavo">Esclavo</option>
                          <option value="Senador">Senador</option>
                        </select>
-                       <label for="">Suplementos:</label>
+                       <label>Suplementos:</label>
                        <div class="suplementos">
                          <div class="suplemento">
                             <input type="checkbox" name="" value="" class="checkbox">
