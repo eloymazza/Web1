@@ -16,10 +16,6 @@
 .columna{
     width: 15%;
 }
-.noticias{
-    width: 70%;
-}
-
 .nav{
     display: flex;
     height: 75px;
@@ -50,6 +46,7 @@ a{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .noticia-principal img{
@@ -69,6 +66,9 @@ a{
     padding: 5px;
     box-sizing: border-box;
     margin: 20px 0px 5px 0px;
+}
+.centrado{
+    text-align: center;
 }
 .intro{
     width: 80%;

@@ -1,0 +1,68 @@
+.crucifixiones{
+    display: flex;
+    width: 80%;
+    border: 1px solid black;
+    
+}
+ .crucifixiones ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid black;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+.crucifixiones ul li{
+    list-style: none;
+    width: 40%;
+    height: 220px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-wrap:wrap;
+    padding: 5px; 
+    box-sizing: border-box;
+}
+.contenedor-imagen-datos{
+    border: 1px solid black;
+    width: 100%;
+    height: 60%;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+}
+.contenedor-imagen-datos img{
+    width: 50%;
+    border: 1px solid black;
+    height: 100%;
+}
+.datos {
+    border: 1px solid black;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.datos div{
+    border: 1px solid black;
+    width: 100%;
+    height: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.causas{
+    border: 1px solid black;
+    width: 100%;
+    height: 40%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.causas h3{
+    margin-left: 3px;
+}
