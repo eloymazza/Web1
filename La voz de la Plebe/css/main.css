@@ -1,9 +1,15 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: "Roman";
+}
+@font-face{
+   font-family: "Roman";
+   src: url(fonts/roman.ttf);
 }
 body{
     background: url(images/decoraciones/background.png);
+    font-family: 'AUGUSTUS';
 }
 .banner{
     background: url(images/decoraciones/Banner.png);
@@ -46,6 +52,9 @@ body{
 span::before {
     content: "Seccion ";
 }
+.margen-home{
+    margin-top: 15px;
+}
 a{
     text-decoration: none;
     padding-bottom: 15px;
@@ -81,7 +90,7 @@ a{
     width: 80%;
     padding: 5px;
     box-sizing: border-box;
-    margin: 10px 0px 5px 0px;
+    margin: 10px 0px;
 }
 .centrado{
     text-align: center;
@@ -89,6 +98,15 @@ a{
 .intro{
     width: 80%;
     margin-bottom: 10px;
+}
+.intro-principal{
+    margin: 10px 0px;
+    font-weight: bold;
+    font-size: 19px;
+}
+.intro-secundaria{
+    text-align: left;
+    margin: 10px 0px;
 }
 p {
     margin-left: 5px;
@@ -107,18 +125,24 @@ p {
 }
 .noticia{
     width: 45%;
-    height: 340px;
+    height: 360px;
     border: 1px solid black;
     margin-bottom: 40px;
     padding: 5px;
+}
+.noticia h3{
+    margin-left: 5px;
 }
 
 .noticia img{
     width: 100%;
     height: 65%;
+    margin-bottom: 10px;
 }
 
+
 .info-noticia{
+    font-size: 12px;
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
@@ -136,8 +160,8 @@ p {
     width: 50%;
 }
 form{
-    width: 50%;
-    height: 460px;
+    width: 70%;
+    height: 500px;
     padding: 15px;
     box-sizing: border-box;
     border: solid black 1px;
@@ -148,7 +172,7 @@ form{
 .columna-formulario{
     width: 45%;
     height: 206px;
-    display: block;
+    display: inline-block;
     padding: 8px;
     
 }
@@ -158,10 +182,12 @@ label{
 select, input{
     width: 90%;
     height: 25px;
-    margin: 5px 0;
+    margin: 10px 0;
+    padding-left: 5px;
 }
 select{
     height: 30px;
+    width: 222px;
 }
 .suplementos{
     display: flex;
@@ -192,14 +218,23 @@ select{
     padding: 5px;
     box-sizing: border-box;
     width: 70%;
-    height: 210px;
+    height: 250px;
 
 }
-textarea{
-    margin-bottom: 2px;
-    resize: none;
+.comentarios{
+    border: 1px solid black;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
 }
-.contenedor-textarea-submit input{
-    width: 40%;
+.comentarios textarea{
+    margin-top: 10px;
+}
+.comentarios  input{
+    width: 35%;
     height: 30px;
 }
