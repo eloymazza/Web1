@@ -2,9 +2,14 @@
     margin: 0px;
     padding: 0px;
 }
+body{
+    background: url(images/decoraciones/background.png);
+}
 .banner{
+    background: url(images/decoraciones/Banner.png);
     border: 1px solid black;
-    height: 200px;
+    height: 200px;  
+    background-size: 100%;
 }
 .columnas-noticias{
     border: 1px solid black;
@@ -14,26 +19,37 @@
     border: 2px solid black;
 }
 .columna{
-    width: 15%;
+    width: 20%;
 }
+
 .nav{
     display: flex;
     height: 75px;
-    border: 2px black solid;
     list-style: none;
-    margin-bottom: 30px;
+    background: url(images/decoraciones/Nav1.png);
 }
 .nav li{
-    border: 1px solid black;
-    width: 16.66%;
+    width: 16.45%;
     font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.indicador-seccion{
+    border: 1px solid black;
+    width: 30%;
+    text-align: center;
+}
+.indicador-seccion span{
+    font-size: 25px;
+}
+span::before {
+    content: "Seccion ";
+}
 a{
     text-decoration: none;
-    padding: 25px 60px;
+    padding-bottom: 15px;
+    padding-left: 20px;
 }
 .fila{
     margin-bottom: 30px;
@@ -65,7 +81,7 @@ a{
     width: 80%;
     padding: 5px;
     box-sizing: border-box;
-    margin: 20px 0px 5px 0px;
+    margin: 10px 0px 5px 0px;
 }
 .centrado{
     text-align: center;
@@ -79,7 +95,7 @@ p {
 }
 .seccion-noticias{
     justify-content: space-between;
-    width: 80%;
+    width: 60%;
     border: 1px solid black;
 }
 .contenedor-noticias-secundarias{
