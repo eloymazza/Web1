@@ -9,98 +9,122 @@
 }
 body{
     background: url(images/decoraciones/background.png);
-    font-family: 'AUGUSTUS';
+}
+/* 
+ En esta seccion se aplican estilos repetidos en varias clases
+*/
+.columnas-noticias, .nav, .info-noticia, .suplemento, .suplementos, .input-radio{
+    display: flex;
+}
+.nav li, .fila, .noticia-principal , .contenedor-noticias-secundarias, form, .contenedor-textarea-submit, .comentarios{
+    display: flex;
+    justify-content: center;   
+}
+.fila, .noticia-principal, .contenedor-noticias-secundarias, form, .suplementos, .contenedor-textarea-submit, .comentarios{
+    flex-wrap: wrap;
+}
+.nav li, .contenedor-textarea-submit,form, .titulo, .cuerpo{
+    box-sizing: border-box;
+}
+.noticia-principal img, .cuerpo, .titulo, .intro, .contenedor-noticias-secundarias, .info-noticia-principal{
+    width: 80%;
+}
+.info-noticia-principal, .noticia-principal img, .noticia img {
+    margin-bottom: 10px;
+}
+.nav li, .info-noticia, .suplemento, .input-radio, .comentarios{
+    align-items: center;
+}
+.nav li, .resaltado, .intro-principal{
+    font-weight: bold;
+}
+.info-noticia, .tips, .comentarios textarea, .indicador-seccion{
+    margin-top: 10px
+}
+.titulo, .info-noticia, .contenedor-textarea-submit, .tips ol{
+    padding: 5px;
+}
+.centrado, .indicador-seccion,.titulo-formulario {
+    text-align: center;
+}
+.suplementos, .info-noticia{
+    font-size: 12px;
+}
+.info-noticia, .seccion-noticias,.contenedor-noticias-secundarias{
+    justify-content: space-between;
+}
+
+
+/* ------------------------
+ Esta seccion contiene las imagenes y tamaños de los banners, columnas y nav
+*/
+img{
+    box-shadow: 0px 0px 3px 3px;
 }
 .banner{
     background: url(images/decoraciones/Banner.png);
-    border: 1px solid black;
     height: 200px;  
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-.columnas-noticias{
-    border: 1px solid black;
-    display: flex;
-}
-.columna, .noticias{
-    border: 2px solid black;
 }
 .columna{
     width: 20%;
+    background: url(images/decoraciones/Columna.png);
 }
-
 .nav{
-    display: flex;
     height: 75px;
     list-style: none;
     background: url(images/decoraciones/Nav1.png);
+    background-size: 100%;
 }
+.nav, .banner, .columna{
+    background-size: 100% 100%;
+}
+/* --------------------- */
 .nav li{
     width: 16.45%;
     font-size: 16px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.alineamiento-home{
-    padding-left: 28px;
-}
-.alineamiento-politica{
-    padding-left: 34px;
-}    
-.alineamiento-sociedad{
-    padding-left: 30px;    
-}  
-.alineamiento-economia, .alineamiento-coliseo, .alineamiento-judiciales{
-    padding-left: 37px; 
-}          
-.indicador-seccion{
-    border: 1px solid black;
-    width: 30%;
-    text-align: center;
-    margin-top: 10px;
-}
-.indicador-seccion p{
-    font-size: 25px;
-}
-.indicador-seccion::before {
-    content: "Seccion ";
-    font-size: 25px;
-}
-.margen-home{
-    margin-top: 15px;
 }
 a{
     text-decoration: none;
     padding-bottom: 15px;
     color: black;
 }
+.alineamiento-home{
+    padding-left: 28px;
+}
+.alineamiento-politica{
+    padding-left: 21px;
+}    
+.alineamiento-sociedad{
+    padding-left: 15px;    
+}  
+.alineamiento-economia{
+    padding-left: 10px;
+}       
+.indicador-seccion{
+    width: 30%;
+    font-size: 25px;
+    font-weight: bold;
+}
+.indicador-seccion::before {
+    content: "Seccion ";
+}
+.margen-home{
+    margin-top: 30px;
+}
 .fila{
     margin-bottom: 30px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 .noticia-principal{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    
     width: 100%;
 }
-
 .noticia-principal img{
-    border: 1px solid black;
-    width: 80%;
     height: 300px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .cuerpo{
-    width: 80%;
-    border: 1px solid black;
     padding: 10px;
-    box-sizing: border-box;
+    border: solid 3px black;
 }
 .cuerpo h3{
     margin-left: 5px;
@@ -110,55 +134,35 @@ p{
 }
 .titulo{
     text-align: left;
-    border: 1px solid black;
-    width: 80%;
-    padding: 5px;
-    box-sizing: border-box;
     margin: 10px 0px;
+   
 }
-.centrado{
-    text-align: center;
-}
-.intro{
-    width: 80%;
-    margin-bottom: 10px;
+.intro {
+    margin-bottom: 20px;
 }
 .intro-principal{
     margin: 10px 0px;
-    font-weight: bold;
     font-size: 19px;
 }
 .intro-secundaria{
     text-align: left;
     margin: 10px 0px;
 }
-
 .seccion-noticias{
-    justify-content: space-between;
     width: 60%;
-    border: 1px solid black;
-}
-.contenedor-noticias-secundarias{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 80%;
-    border: 1px solid black;
+    border: 5px solid black;
 }
 .noticia{
     width: 45%;
-    border: 1px solid black;
     margin-bottom: 40px;
     padding: 10px;
+    border: 2px solid black;
 }
 .noticia h2{
     margin-bottom: 5px;
 }
 .noticia h3{
     margin-left: 5px;
-}
-.resaltado{
-    font-weight: bold;
 }
 .enfasis{
     font-style: italic;
@@ -167,53 +171,31 @@ p{
 .noticia img{
     width: 100%;
     height: 234px;
-    margin-bottom: 10px;
 }
-.info-noticia{
-    font-size: 12px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-}
-.info-noticia-principal{
-    width: 80%;
-    border: 1px solid black;
-    margin-bottom: 10px;
-}
-.titulo-formulario{
-    border: 1px solid black;
-    text-align: center;
-    margin: 15px 0px;
-    width: 70%;
-}
-.tips{
-    margin-top: 10px;
-}
+
 .tips h4{
     margin-bottom: 5px;
 }
 .tips ol{
     margin-left: 30px;
-    padding: 5px;
 }
-form{
+.titulo-formulario, form , textarea{
     width: 70%;
+}
+.titulo-formulario{
+    margin: 15px 0px;
+}
+
+form{
     height: 500px;
     padding: 15px;
-    box-sizing: border-box;
-    border: solid black 1px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    border: solid black 3px;
 }
 .columna-formulario{
     width: 45%;
     height: 206px;
     display: inline-block;
     padding: 8px;
-    
 }
 label{
     font-size: 20px;
@@ -228,14 +210,7 @@ select{
     height: 30px;
     width: 222px;
 }
-.suplementos{
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 12px;
-}
 .suplemento{
-    display: flex;
-    align-items: center;
     justify-content: space-around;
     width: 90px;
 }
@@ -243,37 +218,29 @@ select{
     width: 15px;    
 }
 .input-radio{
-    display: flex;
-    align-items: center;
     height: 67px;
 }
 .margen-hombre{
     margin-right: 40px;
 }
 .contenedor-textarea-submit{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 5px;
-    box-sizing: border-box;
     width: 70%;
     height: 250px;
-
 }
 .comentarios{
-    border: 1px solid black;
-    width: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    width: 500px;
     margin-top: 20px;
     padding: 10px;
 }
 .comentarios textarea{
-    margin-top: 10px;
+    width:400px;
 }
 .comentarios  input{
     width: 35%;
     height: 30px;
+}
+.footer{
+    background: url(images/decoraciones/Footer.png);
+    height: 100px;
+  
 }

@@ -1,26 +1,26 @@
-.coliseo{
+.coliseo, table{
     width: 80%;
+    margin: 10px;
+
+}
+.coliseo{
     border:1px solid black;
-     height: 300px;
-     margin: 10px 0px;
+    height: 300px;
 }
 table{
-    width: 80%;
     border: 1px solid black;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 30px;
+    box-shadow: 3px 3px 3px black;
+    
 }
 th, td, tr{
-    border: 1px solid black;
+    border: 3px solid black;
 }
 tr{
     height: 40px;
 }
-td{
-    padding: 5px;
-    text-align: center;
-}
-.celda-intermedia, .celda-chica{
+.celda-intermedia, .celda-chica, td{
     text-align: center;
 }
 .celda-intermedia{

@@ -1,68 +1,62 @@
-.crucifixiones{
-    display: flex;
-    width: 80%;
-    border: 1px solid black;
-    
-}
- .crucifixiones ul{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    border: 1px solid black;
-    padding-top: 15px;
-    box-sizing: border-box;
-}
-.crucifixiones ul li{
-    list-style: none;
-    width: 40%;
-    height: 220px;
-    border: 1px solid black;
-    margin-bottom: 20px;
+
+.crucifixiones ul li, .datos div, .datos{
     display: flex;
     justify-content: center;
     align-items: center;   
-    flex-wrap:wrap;
-    padding: 5px; 
+}
+.contenedor-imagen-datos, .crucifixiones, .crucifixiones ul{
+    display: flex;
+}
+.crucifixiones ul, .crucifixiones ul li, .datos{
+    flex-wrap: wrap;
+}
+.crucifixiones ul, .causas, .datos div, .contenedor-imagen-datos{
+    width: 100%;
+}
+.crucifixiones ul, .crucifixiones ul li, .contenedor-imagen-datos, .causas{
     box-sizing: border-box;
 }
+.crucifixiones{
+    width: 80%;
+}
+.causas, .crucifixiones ul, .contenedor-imagen-datos{
+    border: 2px solid black;
+}
+ .crucifixiones ul{
+    justify-content: space-around;
+    padding-top: 15px;
+}
+.crucifixiones ul li{ 
+    list-style: none;
+    width: 40%;
+    height: 220px;
+    margin-bottom: 20px;
+    padding: 5px; 
+}
 .contenedor-imagen-datos{
-    border: 1px solid black;
-    width: 100%;
     height: 60%;
-    padding: 5px;
-    box-sizing: border-box;
-    display: flex;
 }
 .contenedor-imagen-datos img{
     width: 50%;
-    border: 1px solid black;
     height: 100%;
+    box-shadow: 0px 0px 0px 0px black;
+    border-right: 4px solid black;
 }
-.datos {
-    border: 1px solid black;
+
+.datos{
     width: 50%;
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 .datos div{
-    border: 1px solid black;
-    width: 100%;
+    border-top: 2px solid black;
     height: 32%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-weight: bolder;
 }
 .causas{
-    border: 1px solid black;
-    width: 100%;
     height: 40%;
-    box-sizing: border-box;
     padding: 5px;
 }
 .causas h3{
     margin-left: 3px;
+    
 }
