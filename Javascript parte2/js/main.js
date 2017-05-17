@@ -4,4 +4,6 @@ $(Document).ready(function(){
     alert("holis")
 });
 */
-$(".boton").hide();
+$("#boton").on("click", function(){
+    $(".info").toggle();
+});
