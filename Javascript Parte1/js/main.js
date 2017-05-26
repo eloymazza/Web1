@@ -160,5 +160,45 @@ function checkComent(comment) {
 }
 */
 
-/* Ejercicio 8 */
+/* Ejercicio 8 
+
+let diasSemana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+let ciclar = true;
+let input = 0;
+
+while(ciclar){
+
+    input = prompt("Ingrese un numero del 1 al 7");
+    if(input < 8 && input > 0){
+        alert(diasSemana[input-1]);
+        ciclar = false;
+    }
+    else{
+        alert("Ha ingresado un valor invalido, intentelo nuevamente");
+    }
+}
+
+*/
+
+
+/* Ejercicio 9 
+
+function invertirTexto(texto) {
+    
+    let textoSplit = document.getElementById("textBox").value.split("");
+    let textoInvertido = "";
+
+    for (let i = textoSplit.length-1; i >= 0; i--) {
+        textoInvertido += textoSplit[i];
+    }
+    alert(textoInvertido);
+}
+*/
+
+for (var i = 1; i <= 11; i++) {
+ console.log(((4 * (Math.pow(3,i))  / 5)));
+}
+
+
+
 

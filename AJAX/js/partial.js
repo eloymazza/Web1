@@ -1,16 +1,16 @@
 $("document").ready(function() {
 
-    $("#cargar").on("click", function () {
+    $("#cargar").on("click", function () {      
         $.ajax({
-            "url": "index.php?",
+            "url": "http://web-unicen.herokuapp.com/api/html",
             "method": "GET",
             "dataType": "HTML",
-            "succes": function (data, textStatus) {
+            "success": function (data, textStatus) {
+                console.log("entre");
                 $("#contenedor").html(data); 
-                $("#comportamiento").on("click", function(){ 
+                $(".js-comportamiento").on("click", function(){ 
                 });
             }
-            
         });
         $("#contenedor").html("Cargando");
     });
