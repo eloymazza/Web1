@@ -195,9 +195,21 @@ function invertirTexto(texto) {
 }
 */
 
-for (var i = 1; i <= 11; i++) {
- console.log(((4 * (Math.pow(3,i))  / 5)));
+/* Ejercicio 10 */
+'esversion:6';
+let display = false;
+let texto = document.getElementById("texto");
+
+function toggle() {
+    if(texto.className === ""){
+        texto.className = "ocultar";
+    }
+    else{
+        texto.className = "";
+    }
 }
+
+
 
 
 
