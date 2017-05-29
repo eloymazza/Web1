@@ -195,7 +195,7 @@ function invertirTexto(texto) {
 }
 */
 
-/* Ejercicio 10 */
+/* Ejercicio 10
 'esversion:6';
 let display = false;
 let texto = document.getElementById("texto");
@@ -209,8 +209,75 @@ function toggle() {
     }
 }
 
+ */
 
+/* Ejercicio 12 */
 
+let contadorCategoria = 2;
+let nuevoHijo;
+let padre;
 
+/*Para colapsar ultima categoria desplegada si se clickea fuera de ella
+
+let ultimaCategoria;
+
+function specialToggle() {
+
+    if(ultimaCategoria.children[0].innerText !== "categoria1"){
+        if(event.target != ultimaCategoria && event.target != ultimaCategoria.firstChild && event.target != ultimaCategoria.previousElementSibling ){
+           ultimaCategoria.previousElementSibling.value = "contraido";
+           ultimaCategoria.className = "ocultar";
+            ultimaCategoria = ultimaCategoria.parentNode;   
+        }
+    }
+  
+}
+*/
+
+function toggle(boton) {
+    
+    padre = boton.parentNode;
+    if(padre.children.length === 1){
+        nuevoHijo =  crearHijo();
+        padre.appendChild(nuevoHijo);
+        boton.value = "colapsado";
+        // inciso c
+       /* ultimaCategoria = boton.nextElementSibling;*/
+    }
+    else{
+        if(boton.value == "colapsado"){
+            boton.nextElementSibling.className = "ocultar";
+            boton.value = "contraido";
+            //inciso c
+            //ultimaCategoria = padre;
+        }
+        else{
+            boton.nextElementSibling.className = "contenedor";
+            boton.value = "colapsado";
+            //inciso c
+           // ultimaCategoria = boton.nextElementSibling;
+        }
+    }
+}
+ 
+function crearHijo() {
+
+    let contenedor = document.createElement("div");
+    contenedor.className = "contenedor";
+    let nuevoBoton = document.createElement("button");
+    nuevoBoton.innerText = "categoria" + contadorCategoria;
+    contadorCategoria++;
+    nuevoBoton.addEventListener("click", function(){
+        toggle(nuevoBoton);
+    });
+    contenedor.appendChild(nuevoBoton);
+
+//inciso c
+   // if(contadorCategoria == 3){
+    //    document.body.addEventListener("mousedown" ,specialToggle);
+   // }
+
+    return contenedor;
+}
 
 

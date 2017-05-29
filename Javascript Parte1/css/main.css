@@ -10,10 +10,29 @@ form{
     
 }*/
 
+/* Ejercicio 10
 .contenedor{
     border: 5px solid green;
     width: 25%;
     height: 100px;
+}
+.ocultar{
+    display: none;
+}
+*/
+body{
+    height: 100vh;
+}
+.contenedorRaiz{
+    width : 500px;
+}
+.contenedor{
+    border: 1px solid black;
+    padding: 5px 0px 0px 5px;
+    
+}
+button {
+    display: block;
 }
 .ocultar{
     display: none;
