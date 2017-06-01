@@ -1,0 +1,23 @@
+/* Ejercicio 2 
+
+.oculto{
+    display: none;
+}
+div {
+    height: 300px;
+}
+*/
+
+/* Ejercicio 3 
+
+.color{
+    color : red;
+}
+*/ 
+
+/* ejercicio 4  y 5*/
+
+.resaltar{
+    font-weight: bolder;
+    font-size: 20px;
+}

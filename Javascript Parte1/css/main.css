@@ -20,6 +20,8 @@ form{
     display: none;
 }
 */
+
+/* Ejericio 12
 body{
     height: 100vh;
 }
@@ -37,3 +39,39 @@ button {
 .ocultar{
     display: none;
 }
+*/
+
+/* Ejercicio 14
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.caja{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    margin-top: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    animation: rebotar 4s infinite;
+    background-color: red;
+}
+ 
+ 
+@keyframes rebotar{
+    0% {
+        margin-left: 0px;
+    }
+    50%{
+        margin-left: 1046px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+*/ 

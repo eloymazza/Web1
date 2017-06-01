@@ -211,7 +211,7 @@ function toggle() {
 
  */
 
-/* Ejercicio 12 */
+/* Ejercicio 12 
 
 let contadorCategoria = 2;
 let nuevoHijo;
@@ -232,7 +232,7 @@ function specialToggle() {
     }
   
 }
-*/
+
 
 function toggle(boton) {
     
@@ -242,7 +242,7 @@ function toggle(boton) {
         padre.appendChild(nuevoHijo);
         boton.value = "colapsado";
         // inciso c
-       /* ultimaCategoria = boton.nextElementSibling;*/
+        ultimaCategoria = boton.nextElementSibling;
     }
     else{
         if(boton.value == "colapsado"){
@@ -280,4 +280,14 @@ function crearHijo() {
     return contenedor;
 }
 
+*/
 
+/* Ejercicio 14 */
+
+let fecha;
+
+function validar() {
+    fecha = document.getElementById("fecha");
+    console.log(/^([0-9])*$/.test(fecha.value));
+    
+}
