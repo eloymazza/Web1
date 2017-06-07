@@ -4,7 +4,7 @@ $("document").ready(function() {
         nombreSeccion = event.target.id;
         console.log(nombreSeccion);
         $.ajax({
-            "url": "http://localhost/Proyectos/practicoAjaxPartialRender/" + nombreSeccion + ".html",
+            "url": "http://localhost:82/Proyectos/ejercicio1/" + nombreSeccion + ".html",
             "method": "GET",
             "dataType": "HTML",
             "success": function (data, textStatus) {
