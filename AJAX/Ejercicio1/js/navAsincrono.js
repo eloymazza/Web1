@@ -1,6 +1,7 @@
 $("document").ready(function() {
     let nombreSeccion;
     $("a").on("click", function(){
+        console.log(event);
         nombreSeccion = event.target.id;
         $.ajax({
             "url": "http://localhost:82/Proyectos/ejercicio1/" + nombreSeccion + ".html",
