@@ -16,15 +16,9 @@ img{
     margin: 15px 0px 15px 0px;
     width: 150px;
 }
-.seleccion-modo{
-    margin-bottom: 80px;
-}
+   
 
 .footer{
     height: 100px;
-}
-
-.desvanecer{
-   transition: opacity;
-   
+    margin-top: 80px;
 }

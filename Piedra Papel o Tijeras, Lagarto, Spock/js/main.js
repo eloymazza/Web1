@@ -12,6 +12,10 @@ $("document").ready(function() {
         setearModo(modoElegido){
             this.modo = modoElegido;
         }
+        getModo(){
+            return this.modo;
+        }
+
         jugar(){
 
         }
@@ -80,12 +84,37 @@ $("document").ready(function() {
 
     }
 
+    // Termina seccion objetos
+
+    function insertarPantallaDeJuego(data) {
+        
+        setTimeout(function(){
+            console.log(data);
+            $(".cuerpo").html(data);
+         }, 3000);
+        
+    }
+
+    function renderPantallaDeJuego(modoDeJuego) {
+        
+        console.log(modoDeJuego);
+        $.ajax({
+            "url": "http://localhost:82/Proyectos/Web1/Piedra%20Papel%20o%20Tijeras,%20Lagarto,%20Spock/partial/pantalla-juego-" + modoDeJuego + ".html",
+            "method": "GET",
+            "dataType": "HTML",
+            "success": insertarPantallaDeJuego,
+        });
+        
+    }
 
     $(".boton").on("click", function(){
-        console.log("entro");
-        $(".seleccion-modo").fadeTo(2000, 0);
 
+        $(".marco").fadeTo(2000, 0);
 
+        let juego = new Juego();
+        juego.setearModo(event.target.name);
+        renderPantallaDeJuego(juego.getModo());
+        
     });
 
     
