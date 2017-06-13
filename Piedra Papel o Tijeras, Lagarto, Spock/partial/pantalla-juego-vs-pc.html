@@ -1,38 +1,50 @@
-<div class="row">
-                <!-- Opcion vs PC-->
-                <div class="col-md-4 col-md-push-1 bg-primary marco">
-                    <div class="row center" >
-                        <div class="col-md-push-2 col-md-8">
-                            <h2>Versus PC</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-push-2 col-md-8">
-                            <img src="" alt="pc" height="200px" width="240px">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-push-3 col-md-6 center">
-                            <button type="button" class="btn btn-info boton js-boton-modo-vs-pc" name="vs-pc">Elegir</button>
-                        </div>
+<div class="row ">
+    <!-- Marco j1-->
+    <div class="col-md-4 ">
+        <div class="row center" >
+            <div class="col-md-push-2 col-md-8">
+                <h2>Jugador 1</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-push-2 col-md-8">
+                <img src="" alt="pc" height="200px" width="240px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-push-2 col-md-8 center">
+                <div class="row">
+                    <div class="col-md-push-4 col-md-4 center">
+                        <label for="">Elije:</label>   
                     </div>
                 </div>
-                <!-- Opcion vs Jugador Humano-->
-                <div class="col-md-4 col-md-push-3 bg-primary marco">
-                    <div class="row center" >
-                        <div class="col-md-push-2 col-md-8">
-                            <h2>Versus Humano</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-push-2 col-md-8">
-                            <img src="" alt="Human" height="200px" width="240px">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-push-3 col-md-6 center">
-                            <button type="button" class="btn btn-info boton js-boton-modo-vs-humano" name="vs-humano">Elegir</button>
-                        </div>
-                    </div>
+                <div class="row">
+                    <select class="js-eleccion-j1 ">
+                        <option value="piedra">Piedra</option>
+                        <option value="papel">Papel</option>
+                        <option value="tijera">Tijera</option>
+                        <option value="lagarto">Lagarto</option>
+                        <option value="spock">Spock</option>
+                    </select>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- boton -->
+    <div class="col-md-2">
+        <button type="button" class="boton btn btn-primary js-jugar">Jugar</button>
+    </div>
+    <!-- Marco pc-->
+    <div class="col-md-4  marco">
+        <div class="row center" >
+            <div class="col-md-push-2 col-md-8">
+                <h2>Pc</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-push-2 col-md-8">
+                <img src="" alt="pc" height="200px" width="240px">
+            </div>
+        </div>
+    </div>
+</div>

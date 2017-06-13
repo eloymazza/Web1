@@ -2,10 +2,10 @@ $("document").ready(function() {
 
     class Juego{
 
-        constructor(){
+        constructor(creditoInicial){
             this.modo = "";
-            this.p1 = new Jugador();
-            this.p2 = new Jugador();
+            this.j1 = new Jugador(creditoInicial);
+            this.j2 = new Jugador(creditoInicial);
             this.tabla = new TablaDeRelaciones();
         }
 
@@ -15,9 +15,10 @@ $("document").ready(function() {
         getModo(){
             return this.modo;
         }
-
         jugar(){
-
+            this.j1.setEleccion($(".js-eleccion-j1").val());
+            this.j2.setEleccion(Math.floor(Math.random()*5 +1));
+            alert(tabla.decidirGanador(j1.getEleccion(), j2.getEleccion()));
         }
     }
 
@@ -32,6 +33,9 @@ $("document").ready(function() {
         }
         setEleccion(eleccion){
             this.eleccion = eleccion;
+        }
+        getEleccion(){
+            return this.eleccion;
         }
     }
 
@@ -86,36 +90,35 @@ $("document").ready(function() {
 
     // Termina seccion objetos
 
-    function insertarPantallaDeJuego(data) {
-        
-        setTimeout(function(){
-            console.log(data);
-            $(".cuerpo").html(data);
-         }, 3000);
-        
+    const creditoInicial = 100;
+
+    function escucharBotonJugar(juego){
+        $(".js-jugar").on("click", function(){
+            alert("hola");
+            juego.jugar();
+        });
     }
 
-    function renderPantallaDeJuego(modoDeJuego) {
+
+    function renderPantallaDeJuego(juego) {
         
-        console.log(modoDeJuego);
         $.ajax({
-            "url": "http://localhost:82/Proyectos/Web1/Piedra%20Papel%20o%20Tijeras,%20Lagarto,%20Spock/partial/pantalla-juego-" + modoDeJuego + ".html",
+            "url": "http://localhost:82/Proyectos/Web1/Piedra%20Papel%20o%20Tijeras,%20Lagarto,%20Spock/partial/pantalla-juego-" + juego.getModo() + ".html",
             "method": "GET",
             "dataType": "HTML",
-            "success": insertarPantallaDeJuego,
+            "success": function (data){
+                 $(".cuerpo").html(data);
+                 escucharBotonJugar(juego);
+            }
         });
-        
     }
 
     $(".boton").on("click", function(){
 
-        $(".marco").fadeTo(2000, 0);
-
-        let juego = new Juego();
+        let juego = new Juego(creditoInicial);
         juego.setearModo(event.target.name);
-        renderPantallaDeJuego(juego.getModo());
+        renderPantallaDeJuego(juego);
         
     });
 
-    
 });
