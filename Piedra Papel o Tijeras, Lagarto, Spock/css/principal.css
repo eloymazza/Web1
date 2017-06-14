@@ -1,24 +1,48 @@
-
-header{
-    margin-bottom: 80px;
-    padding: 10px;
-    height: 100px;
+@font-face{
+    font-family: "Lunisolar";
+    src: url(fonts/Lunisolar.otf);
 }
-.center{
+body{
+    font-family: "Lunisolar";
+    font-weight: lighter;
+    -webkit-text-stroke: black 2px;
+    color: white;
+}
+.apariencia-fondo, .botones-eleccion-modo{
+    background-color: #009688;
+    border: 2px solid black;
+}
+.contenedor-titulo{
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titulo{
+    font-size: 55px;
+    text-shadow: 5px 4px 4px black;
+    margin-top: 0;
     text-align: center;
 }
-.marco{
-    padding: 10px;
-    background-color: red; 
-}
-img{
-    border: 1px black;
-}
-.boton {
-    margin: 15px 0px 15px 0px;
-    width: 150px;
-}
+ .espaciado-entre-contenedores{
+    margin-bottom: 50px;
+ }
+ .contenedor-imagen{
+     background-color: white;
+     width: 90%;
+     height: 280px;
+     padding: 10%;
+     border: 3px solid black;
+ }
+ .imagen{
+     max-height: 280px;
+ }
+
+ .centrar-contenido{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
 .footer{
-    height: 100px;
-    margin-top: 80px;
+    height: 150px;
 }

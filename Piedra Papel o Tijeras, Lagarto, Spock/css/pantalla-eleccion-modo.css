@@ -1,0 +1,25 @@
+.subtitulo{
+    font-size: 40px;
+    text-align: center;
+}
+.marco{
+     margin-bottom: 40px;
+     padding-top: 30px;
+ }
+  .contenedor-boton{
+     width: 90%;
+     height: 90px;
+ }
+  .botones-eleccion-modo, .boton-jugar{
+     width: 50%;
+     height: 50%;
+     font-size: 30px;
+     box-shadow: 2px 2px 6px black;
+     outline: none;
+ }
+.botones-eleccion-modo:active, .boton-jugar:active{
+    transform: translate(2px, 2px);
+    transition: 25ms;
+    box-shadow: none;
+    background-color: #4DB6AC; 
+}

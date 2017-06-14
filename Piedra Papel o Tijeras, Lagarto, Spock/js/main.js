@@ -16,9 +16,8 @@ $("document").ready(function() {
             return this.modo;
         }
         jugar(){
-            this.j1.setEleccion($(".js-eleccion-j1").val());
-            this.j2.setEleccion(Math.floor(Math.random()*5 +1));
-            alert(tabla.decidirGanador(j1.getEleccion(), j2.getEleccion()));
+            
+        
         }
     }
 
@@ -89,36 +88,24 @@ $("document").ready(function() {
     }
 
     // Termina seccion objetos
+    
+    $(".js-elegir-modo").on("mouseup", iniciarJuego);
 
-    const creditoInicial = 100;
-
-    function escucharBotonJugar(juego){
-        $(".js-jugar").on("click", function(){
-            alert("hola");
-            juego.jugar();
-        });
-    }
-
-
-    function renderPantallaDeJuego(juego) {
-        
+    function iniciarJuego(event) {
+         
+        let modoElegido = this.innerText;
+       
         $.ajax({
-            "url": "http://localhost:82/Proyectos/Web1/Piedra%20Papel%20o%20Tijeras,%20Lagarto,%20Spock/partial/pantalla-juego-" + juego.getModo() + ".html",
+            "url": "http://localhost/proyectos/Web1/Piedra%20Papel%20o%20Tijeras,%20Lagarto,%20Spock/partial/pantalla-juego-"+modoElegido +".html",
             "method": "GET",
             "dataType": "HTML",
-            "success": function (data){
-                 $(".cuerpo").html(data);
-                 escucharBotonJugar(juego);
+            "success": function(data){
+                $(".js-cuerpo").html(data);
             }
+
         });
+
     }
 
-    $(".boton").on("click", function(){
-
-        let juego = new Juego(creditoInicial);
-        juego.setearModo(event.target.name);
-        renderPantallaDeJuego(juego);
-        
-    });
 
 });

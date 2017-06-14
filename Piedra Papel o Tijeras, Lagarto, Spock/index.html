@@ -4,84 +4,87 @@
         <title>Piedra Papel o tijeras, Lagarto, Spock</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        -->
+         <!-- Descomentar si no hay internet
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        -->
         <link rel="stylesheet" href="css/principal.css">
+        <link rel="stylesheet" href="css/pantalla-eleccion-modo.css">
+        <link rel="stylesheet" href="css/pantalla-juego.css">
     </head>
     <body>
-
-    <header class="marco">
-        <div class="container-fluid  header">
-            <div class="row ">
-                <div class=" col-md-6 col-md-offset-3 center ">
-                    <h1>Piedra, papel o tijeras, lagarto Spock</h1>
-                </div>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Pantalla de seleccion de modo de juego -->
-    <article>
-        <section>
-            <div class="container cuerpo">
+        <!-- Header -->
+        <header>
+            <div class="container-fluid espaciado-entre-contenedores apariencia-fondo">
                 <div class="row">
-                    <!-- Opcion vs PC-->
-                    <div class="col-md-4 col-md-push-1  marco">
-                        <div class="row center" >
-                            <div class="col-md-push-2 col-md-8">
-                                <h2>Versus PC</h2>
-                            </div>
+                    <div class="col-md-10 col-md-push-1">
+                        <div class="contenedor-titulo">
+                            <h1 class="titulo">Piedra, Papel o Tijeras, Lagarto, Spock</h1>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Pantalla de eleccion de modo de juego -->
+        <article>
+            <div class="container espaciado-entre-contenedores js-cuerpo">
+                <div class="row">
+                    <div class="col-md-12 apariencia-fondo espaciado-entre-contenedores">
+                        <h2 class="subtitulo">Elija modo de juego:</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-sm-5 apariencia-fondo marco">
                         <div class="row">
-                            <div class="col-md-push-2 col-md-8">
-                                <img src="" alt="pc" height="200px" width="240px">
+                            <div class="col-md-12 centrar-contenido">
+                                <div class="contenedor-imagen centrar-contenido">
+                                    <img src="css/images/pantalla-de-eleccion/vs-pc.png" alt="vs-pc" class="img-responsive imagen">
+                                </div>
                             </div>
-                        </div>
+                        </div> 
                         <div class="row">
-                            <div class="col-md-push-3 col-md-6 center">
-                                <button type="button" class="btn btn-info boton js-boton-modo-vs-pc" name="vs-pc">Elegir</button>
+                            <div class="col-md-12 centrar-contenido">
+                               <div class="contenedor-boton centrar-contenido">
+                                   <button type="button" class="botones-eleccion-modo js-elegir-modo">Vs-Pc</button>
+                               </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Opcion vs Jugador Humano-->
-                    <div class="col-md-4 col-md-push-3 bg-primary marco">
-                        <div class="row center" >
-                            <div class="col-md-push-2 col-md-8">
-                                <h2>Versus Humano</h2>
+                    <div class="col-md-5 col-md-push-2 col-sm-5 col-sm-push-2 apariencia-fondo marco">
+                       <div class="row">
+                            <div class="col-md-12 centrar-contenido">
+                                <div class="contenedor-imagen centrar-contenido">
+                                    <img src="css/images/pantalla-de-eleccion/vs-j2.png" alt="vs-j2" class="img-responsive imagen">
+                                </div>
                             </div>
-                        </div>
+                        </div> 
                         <div class="row">
-                            <div class="col-md-push-2 col-md-8">
-                                <img src="" alt="Human" height="200px" width="240px">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-push-3 col-md-6 center">
-                                <button type="button" class="btn btn-info boton js-boton-modo-vs-humano" name="vs-humano">Elegir</button>
+                            <div class="col-md-12 centrar-contenido">
+                               <div class="contenedor-boton centrar-contenido">
+                                   <button type="button" class="botones-eleccion-modo js-elegir-modo">Vs-J2</button>
+                               </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </article>
+        </article>
+        <!-- Footer -->
+        <footer>
+            <div class="container-fluid apariencia-fondo footer"></div>
+        </footer>
 
-    <footer>
-        <div class="container-fluid bg-primary footer">
-            <div class="row">
-                
-            </div>
-        </div>
-    </footer>
     
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--  Descomentar si no hay internet
     <script src="js/jquery-3.2.1.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+    -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Descomentar si no hay internet
     <script src="js/bootstrap.min.js"></script>
+    -->
     <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

@@ -1,50 +1,96 @@
 <div class="row ">
-    <!-- Marco j1-->
-    <div class="col-md-4 ">
-        <div class="row center" >
-            <div class="col-md-push-2 col-md-8">
-                <h2>Jugador 1</h2>
+    <div class="col-md-4 col-sm-4 apariencia-fondo marco-pantalla-juego espaciado-entre-contenedores">
+        <div class="row">
+            <div class="col-md-12 centrar-contenido">
+                <h2 class="indicador-jugador">Jugador 1</h2>
+            </div>   
+        </div>
+        <div class="row">
+            <div class="col-md-12 centrar-contenido">
+                <p class="credito">
+                    Credito: <span class="js-cambiar-credito">100</span>
+                </p>
+            </div>   
+        </div>
+        <div class="row">
+            <div class="col-md-12 centrar-contenido">
+                <div class="contenedor-imagen centrar-contenido">
+                    <img src="css/images/pantalla-juego/signo.jpg" alt="jugador-1" class="img-responsive imagen">
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-push-2 col-md-8">
-                <img src="" alt="pc" height="200px" width="240px">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-push-2 col-md-8 center">
-                <div class="row">
-                    <div class="col-md-push-4 col-md-4 center">
-                        <label for="">Elije:</label>   
+            <div class="col-md-12 centrar-contenido">
+                <div class="contenedor-seleccionador centrar-contenido">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle seleccionador" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                         Elegir
+                        <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu lista-opciones" aria-labelledby="dropdownMenu1">
+                            <li>Piedra</li>
+                            <li>Papel</li>
+                            <li>Tijera</li>
+                            <li>Lagarto</li>
+                            <li>Spock</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="row">
-                    <select class="js-eleccion-j1 ">
-                        <option value="piedra">Piedra</option>
-                        <option value="papel">Papel</option>
-                        <option value="tijera">Tijera</option>
-                        <option value="lagarto">Lagarto</option>
-                        <option value="spock">Spock</option>
-                    </select>
-                </div>
+                </div>  
             </div>
         </div>
     </div>
-    <!-- boton -->
-    <div class="col-md-2">
-        <button type="button" class="boton btn btn-primary js-jugar">Jugar</button>
-    </div>
-    <!-- Marco pc-->
-    <div class="col-md-4  marco">
-        <div class="row center" >
-            <div class="col-md-push-2 col-md-8">
-                <h2>Pc</h2>
+    <div class="col-md-4 col-sm-4 espaciado-entre-contenedores">
+        <div class="row">
+            <div class="col-md-12 centrar-contenido">
+                <table class="table-responsive tabla apariencia-fondo">
+                    <thead>
+                        <th>J1</th>
+                        <th>J2</th>
+                    </thead>
+                    <tbody>
+                        <td>0</td>
+                        <td>0</td>
+                    </tbody>
+                </table>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-push-2 col-md-8">
-                <img src="" alt="pc" height="200px" width="240px">
+            <div class="col-md-12 centrar-contenido">
+                <div class="centrar-contenido contenedor-imagen-vs hidden-xs">
+                    <img src="css/images/pantalla-juego/vs.jpg" class="imagen-vs imagen-responsive" alt="vs">
+                </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="contenedor-boton-jugar centrar-contenido">
+                <button type="button" class="boton-jugar">Jugar</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4 apariencia-fondo marco-pantalla-juego espaciado-entre-contenedores">
+        <div class="row">
+            <div class="col-md-12 centrar-contenido">
+                <h2 class="indicador-jugador">Pc</h2>
+            </div>   
+        </div>
+        <div class="row">
+            <div class="col-md-12 centrar-contenido">
+                <p class="credito">
+                    Credito: <span class="js-cambiar-credito">100</span>
+                </p>
+            </div>   
+        </div>
+        <div class="row">
+            <div class="col-md-12 centrar-contenido">
+                <div class="contenedor-imagen centrar-contenido">
+                    <img src="css/images/pantalla-juego/signo.jpg" alt="PC" class="img-responsive imagen">
+                </div>
+            </div>
+            <div class="col-md-12 centrar-contenido">
+                <div class="contenedor-resultado centrar-contenido">
+                    <h2 class="resultado">Eleccion pc</h3>
+                </div>
+            </div>    
         </div>
     </div>
 </div>
