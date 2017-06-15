@@ -1,0 +1,81 @@
+<!-- Pantalla de basica-->
+<article>
+    <div class="row">
+        <!--Marco para jugador 1-->
+        <section>
+            <div class="col-md-4 col-sm-4 apariencia-fondo marco-pantalla-juego espaciado-entre-contenedores">
+                <div class="row">
+                    <div class="col-md-12 centrar-contenido">
+                        <h2 class="indicador-jugador">Jugador 1</h2>
+                    </div>   
+                </div>
+                <div class="row">
+                    <div class="col-md-12 centrar-contenido">
+                        <p class="credito">
+                            Credito: <span class="js-credito-j1">100</span>
+                        </p>
+                    </div>   
+                </div>
+                <div class="row">
+                    <div class="col-md-12 centrar-contenido">
+                        <div class="contenedor-imagen centrar-contenido">
+                            <img src="css/images/pantalla-juego/signo.jpg" alt="jugador-1" class="img-responsive imagen">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 centrar-contenido">
+                        <div class="contenedor-seleccionador centrar-contenido">
+                            <div class="dropdown">
+                                <button class="dropdown-toggle seleccionador" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Elegir
+                                </button>
+                                <ul class="dropdown-menu lista-opciones js-eleccion-j1" aria-labelledby="dropdownMenu1">
+                                    <li id="piedra">Piedra</li>
+                                    <li id="papel">Papel</li>
+                                    <li id="tijera">Tijera</li>
+                                    <li id="lagarto">Lagarto</li>
+                                    <li id="spock">Spock</li>
+                                </ul>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </section>   
+        <!-- Seccion donde va la tabla de puntuaciones, la imagen de versus, y el boton jugar-->
+        <section>
+            <div class="col-md-4 col-sm-4 espaciado-entre-contenedores">
+                <div class="row">
+                    <div class="col-md-12 centrar-contenido">
+                        <table class="table-responsive tabla apariencia-fondo">
+                            <thead>
+                                <th>J1</th>
+                                <th>J2</th>
+                            </thead>
+                            <tbody>
+                                <td>0</td>
+                                <td>0</td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 centrar-contenido">
+                        <div class="centrar-contenido contenedor-imagen-vs hidden-xs">
+                            <img src="css/images/pantalla-juego/vs.jpg" class="imagen-vs imagen-responsive" alt="vs">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contenedor-boton-jugar centrar-contenido">
+                        <button type="button" class="boton-jugar js-jugar">Jugar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="js-partial-vs">
+            
+        </section> 
+    </div>  
+</article>
