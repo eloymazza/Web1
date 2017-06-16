@@ -1,31 +1,39 @@
 $("document").ready(function() {
 
+    /* Seccion objetos */
+
     class Juego{
 
         constructor(j1,j2){
             this.jugador1 = j1;
             this.jugador2 = j2;
             this.tablaDeRelaciones = new TablaDeRelaciones();
+            this.contadorPartidasGanadas = new Contador();
         }
         jugar(){
             if(this.checkearCredito()){
-                let resultado = this.decidirGanador();
+                let eleccionj1 = this.jugador1.getEleccion();
+                let eleccionj2 = this.jugador2.getEleccion();
+                let resultado = this.decidirGanador(eleccionj1, eleccionj2);
                 console.log(resultado);
                 if(resultado === "gana"){
                     this.mostrarGanador(this.jugador1);
                     this.jugador1.actualizarCredito(premioApuesta * this.spockFriendly());
                     this.jugador2.actualizarCredito(costoJugada);
+                    this.contadorPartidasGanadas.incrementarContadorj1();
                 }
                 else if(resultado === "pierde"){
                     this.mostrarGanador(this.jugador2);
                     this.jugador1.actualizarCredito(costoJugada);
                     this.jugador2.actualizarCredito(premioApuesta);
+                    this.contadorPartidasGanadas.incrementarContadorj2();
                 }
                 else{
                     alert("Hubo empate");
                     this.jugador1.actualizarCredito(costoJugada);
                     this.jugador2.actualizarCredito(costoJugada);
                 }
+                this.actualizarElecciones(eleccionj1, eleccionj2);
             }
             else{
                 alert("El credito de alguno de los jugadores no es suficiente para seguir jugando");
@@ -34,8 +42,8 @@ $("document").ready(function() {
         checkearCredito(){
             return this.jugador1.creditoSuficiente() && this.jugador2.creditoSuficiente();
         }
-        decidirGanador(){
-            return this.tablaDeRelaciones.decidirGanador(this.jugador1.getEleccion(), this.jugador2.getEleccion());
+        decidirGanador(eleccionj1, eleccionj2){
+            return this.tablaDeRelaciones.decidirGanador(eleccionj1, eleccionj2);
         }
         spockFriendly(){
             if(this.jugador1.getEleccion() === "spock"){
@@ -46,15 +54,39 @@ $("document").ready(function() {
         mostrarGanador(ganadorRonda){
                 alert("El ganador es: " + ganadorRonda.getNombre());   
         }
+        actualizarElecciones(eleccionj1, eleccionj2){
+            $(".js-imagen-j1").attr("src", "css/images/pantalla-juego/"+ eleccionj1 +".png");
+            $(".js-imagen-j2").attr("src","css/images/pantalla-juego/"+ eleccionj2 +".png");
+        }
+    }
+
+    class Contador{
+
+        constructor(){
+            this.contadorj1 = $(".js-contador-j1");
+            this.contadorj2 = $(".js-contador-j2");
+            this.partidasGanadasJ1 = 0;
+            this.partidasGanadasJ2 = 0;
+        }
+        incrementarContadorj1(){
+            this.partidasGanadasJ1++;
+            this.contadorj1.html(this.partidasGanadasJ1);
+        }
+        incrementarContadorj2(){
+            this.partidasGanadasJ2++;
+            this.contadorj2.html(this.partidasGanadasJ2);
+        }
+
+
     }
 
     class Jugador{
 
        constructor(nombre,creditoInicial, panelCredito){
+           this.nombre = nombre;
            this.credito = creditoInicial;
            this.panelCredito = panelCredito;
            this.eleccion = "piedra";
-           this.nombre = nombre;
        }
        creditoSuficiente(){
            return this.credito >= 5;
@@ -154,7 +186,7 @@ $("document").ready(function() {
 
     }
 
-    // Termina seccion objetos
+    //  Seccion de procedimientos
 
     const creditoInicial = 100;
     const costoJugada = -5;
@@ -194,7 +226,7 @@ $("document").ready(function() {
         
         $.ajax({
 
-            "url": "http://localhost/proyectos/Web1/Piedra%20Papel%20o%20Tijeras,%20Lagarto,%20Spock/partial/marco-"+modoElegido+".html",
+            "url": "http://localhost:82/proyectos/Web1/Piedra%20Papel%20o%20Tijeras,%20Lagarto,%20Spock/partial/marco-"+modoElegido+".html",
             "method": "GET",
             "dataType": "HTML",
             "success": function(data){
@@ -211,7 +243,7 @@ $("document").ready(function() {
         let modoElegido = this.innerText;
        
         $.ajax({
-            "url": "http://localhost/proyectos/Web1/Piedra%20Papel%20o%20Tijeras,%20Lagarto,%20Spock/partial/pantalla-juego.html",
+            "url": "http://localhost:82/proyectos/Web1/Piedra%20Papel%20o%20Tijeras,%20Lagarto,%20Spock/partial/pantalla-juego.html",
             "method": "GET",
             "dataType": "HTML",
             "success": function(data){
