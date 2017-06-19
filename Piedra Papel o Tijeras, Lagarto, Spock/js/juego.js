@@ -8,42 +8,50 @@ $("document").ready(function() {
             this.jugador1 = j1;
             this.jugador2 = j2;
             this.tablaDeRelaciones = new TablaDeRelaciones();
-            this.contadorPartidasGanadas = new Contador();
         }
         jugar(){
             if(this.checkearCredito()){
                 let eleccionj1 = this.jugador1.getEleccion();
                 let eleccionj2 = this.jugador2.getEleccion();
+                this.actualizarElecciones(eleccionj1, eleccionj2);
+                let multiplicador = 1;
                 let resultado = this.decidirGanador(eleccionj1, eleccionj2);
-                console.log(resultado);
                 if(resultado === "gana"){
-                    this.mostrarGanador(this.jugador1);
-                    this.jugador1.actualizarCredito(premioApuesta * this.spockFriendly());
-                    this.jugador2.actualizarCredito(costoJugada);
-                    this.contadorPartidasGanadas.incrementarContadorj1();
+                    multiplicador = this.spockFriendly();
+                    this.actualizarPantalla(this.jugador1, multiplicador);
                 }
                 else if(resultado === "pierde"){
-                    this.mostrarGanador(this.jugador2);
-                    this.jugador1.actualizarCredito(costoJugada);
-                    this.jugador2.actualizarCredito(premioApuesta);
-                    this.contadorPartidasGanadas.incrementarContadorj2();
+                    this.actualizarPantalla(this.jugador2, multiplicador);
                 }
-                else{
+                else {
                     alert("Hubo empate");
-                    this.jugador1.actualizarCredito(costoJugada);
-                    this.jugador2.actualizarCredito(costoJugada);
                 }
-                this.actualizarElecciones(eleccionj1, eleccionj2);
+                this.jugador1.actualizarCredito(costoJugada);
+                this.jugador2.actualizarCredito(costoJugada);
             }
             else{
                 alert("El credito de alguno de los jugadores no es suficiente para seguir jugando");
             }
         }
         checkearCredito(){
-            return this.jugador1.creditoSuficiente() && this.jugador2.creditoSuficiente();
+            let creditosValidos = true;
+            if(!this.jugador1.creditoSuficiente()){
+                alert("Jugador 1 se ha quedado sin credito");
+                creditosValidos = false;
+            }
+            if(!this.jugador2.creditoSuficiente()){
+                alert("Jugador 2 se ha quedado sin credito");
+                creditosValidos = false;
+            }
+            return creditosValidos;
         }
         decidirGanador(eleccionj1, eleccionj2){
             return this.tablaDeRelaciones.decidirGanador(eleccionj1, eleccionj2);
+        }
+        actualizarPantalla(ganador, multiplicador){
+            this.mostrarGanador(ganador);
+            ganador.actualizarCredito(premioApuesta * multiplicador);
+            ganador.actualizarPartidasGanadas();
         }
         spockFriendly(){
             if(this.jugador1.getEleccion() === "spock"){
@@ -58,35 +66,20 @@ $("document").ready(function() {
             $(".js-imagen-j1").attr("src", "css/images/pantalla-juego/"+ eleccionj1 +".png");
             $(".js-imagen-j2").attr("src","css/images/pantalla-juego/"+ eleccionj2 +".png");
         }
-    }
-
-    class Contador{
-
-        constructor(){
-            this.contadorj1 = $(".js-contador-j1");
-            this.contadorj2 = $(".js-contador-j2");
-            this.partidasGanadasJ1 = 0;
-            this.partidasGanadasJ2 = 0;
-        }
-        incrementarContadorj1(){
-            this.partidasGanadasJ1++;
-            this.contadorj1.html(this.partidasGanadasJ1);
-        }
-        incrementarContadorj2(){
-            this.partidasGanadasJ2++;
-            this.contadorj2.html(this.partidasGanadasJ2);
-        }
-
 
     }
+
+    
 
     class Jugador{
 
-       constructor(nombre,creditoInicial, panelCredito){
+       constructor(nombre, panelCredito, celdaContador){
            this.nombre = nombre;
            this.credito = creditoInicial;
            this.panelCredito = panelCredito;
            this.eleccion = "piedra";
+           this.contador = celdaContador;
+           this.partidasGanadas = 0;
        }
        creditoSuficiente(){
            return this.credito >= 5;
@@ -98,12 +91,16 @@ $("document").ready(function() {
        getNombre(){
            return this.nombre;
        }
+       actualizarPartidasGanadas(){
+            this.partidasGanadas++;
+            this.contador.html(this.partidasGanadas);
+       }
     }
 
     class JugadorHumano extends Jugador{
 
-        constructor(nombre,creditoInicial, panelCredito){
-            super(nombre,creditoInicial, panelCredito);
+        constructor(nombre, panelCredito,celdaContador){
+            super(nombre, panelCredito, celdaContador);
         }
         elegir(eleccion){
             this.eleccion = eleccion;
@@ -111,13 +108,12 @@ $("document").ready(function() {
         getEleccion(){
            return this.eleccion;
        }
-
     }
 
     class JugadorPC extends Jugador{
 
-        constructor(nombre,creditoInicial, panelCredito){
-            super(nombre,creditoInicial, panelCredito);
+        constructor(nombre, panelCredito, celdaContador){
+            super(nombre, panelCredito, celdaContador);
         }
         getEleccion(){
             this.eleccion = this.elegir();
@@ -143,7 +139,7 @@ $("document").ready(function() {
             this.tabla = {
 
                 "piedra": {
-                    "piedra": "empataste",
+                    "piedra": "empata",
                     "papel": "pierde",
                     "tijera": "gana",
                     "lagarto": "gana",
@@ -207,16 +203,17 @@ $("document").ready(function() {
 
     function iniciarJuego(modoElegido) {
 
-        let j1 = new JugadorHumano("Jugador 1", creditoInicial, $(".js-credito-j1"));
+        let j1 = new JugadorHumano("Jugador 1", $(".js-credito-j1"), $(".js-contador-j1"));
         let j2;
         if(modoElegido === "Vs-Pc"){
-            j2 = new JugadorPC("Jugador pc", creditoInicial, $(".js-credito-pc"));
+            j2 = new JugadorPC("Jugador pc", $(".js-credito-pc"), $(".js-contador-j2"));
         }
         else{
-            j2 = new JugadorHumano("Jugador 2", creditoInicial, $(".js-credito-j2"));
+            j2 = new JugadorHumano("Jugador 2", $(".js-credito-j2"), $(".js-contador-j2"));
         }
 
         let juego = new Juego(j1,j2);
+        
 
         inicializarEventHandlers(j1,j2, juego);
         
@@ -226,7 +223,7 @@ $("document").ready(function() {
         
         $.ajax({
 
-            "url": "http://localhost:82/proyectos/Web1/Piedra%20Papel%20o%20Tijeras,%20Lagarto,%20Spock/partial/marco-"+modoElegido+".html",
+            "url": "partial/marco-"+modoElegido+".html",
             "method": "GET",
             "dataType": "HTML",
             "success": function(data){
@@ -243,7 +240,7 @@ $("document").ready(function() {
         let modoElegido = this.innerText;
        
         $.ajax({
-            "url": "http://localhost:82/proyectos/Web1/Piedra%20Papel%20o%20Tijeras,%20Lagarto,%20Spock/partial/pantalla-juego.html",
+            "url": "partial/pantalla-juego.html",
             "method": "GET",
             "dataType": "HTML",
             "success": function(data){
