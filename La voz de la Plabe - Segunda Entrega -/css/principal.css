@@ -1,0 +1,31 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+div{
+    padding: 0px;
+}
+a{
+    color: black;  
+    
+}
+
+.imagen-banner, .imagen-columna, .imagen-footer{
+    max-width: 100%;
+}
+.centrar-contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.normalizar-color{
+    background-color: inherit;
+}
+.nav li{
+    font-size: 90%;
+    border: 5px solid black;
+}
+.normalizar-padding, .navbar-collapse{
+    padding: 0;
+}
