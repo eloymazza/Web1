@@ -1,15 +1,20 @@
 body{
     margin: 0px;
     padding: 0px;
+    background-color: #b67f2e;
+    font-family: "Roman";
+    font-weight: bolder;
 }
 div{
     padding: 0px;
 }
 a{
     color: black;  
-    
 }
-
+@font-face{
+   font-family: "Roman";
+   src: url(fonts/roman.ttf);
+}
 .imagen-banner, .imagen-columna, .imagen-footer{
     max-width: 100%;
 }
@@ -21,11 +26,32 @@ a{
 }
 .normalizar-color{
     background-color: inherit;
+    border: none;
+}
+.contenedor-links{
+    width: 100%;
 }
 .nav li{
-    font-size: 90%;
+    margin: 0;
+    box-sizing: border-box;
     border: 5px solid black;
 }
+.nav li a{
+    width: 100%;
+    height: 30px;
+    padding: 5px 0px;
+    margin: 0;
+    font-size: 100%;
+}
+.nav li a:hover, .nav li a:focus{
+    background-color: #986523;
+    color: black;
+}
+
 .normalizar-padding, .navbar-collapse{
     padding: 0;
+}
+
+.margen-superior-nav{
+    margin-top: 10px;
 }

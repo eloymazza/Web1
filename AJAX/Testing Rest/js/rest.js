@@ -61,7 +61,12 @@ window.addEventListener("load",function name() {
         let info = infoPost.val();
         let objeto = { 
             "group": 8,
-            "thing": info,
+            "thing": {
+                "evento": "Dumbo vs Los Tres Tristes Tigres",
+                "descripcion": "Un elefante se enfrenta a tres hambrientos tigres",
+                "fecha": "Miercoles 16",
+                "hora": "10:00 hs"
+            },
         };
         $.ajax({
             "url" : "http://web-unicen.herokuapp.com/api/thing",

@@ -11,6 +11,7 @@
         -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/principal.css">
+        <link rel="stylesheet" href="css/tabla-coliseo.css">
     </head>
     <body>
     <!-- Banner con titulo de la pagina-->
@@ -38,11 +39,11 @@
                 <div class="col-sm-8">
                     <!-- Navegacion -->
                     <div class="row">
-                        <div class="col-md-12 normalizar-padding">
+                        <div class="col-md-12 normalizar-padding margen-superior-nav ">
                             <nav class="navbar navbar-default centrar-contenido normalizar-color">
-                            <div class="container-fluid normalizar-padding">
+                            <div class=" normalizar-padding contenedor-links">
                                 <!-- Brand and toggle get grouped for better mobile display -->
-                                <div class="navbar-header">
+                                <div class="navbar-header centrar-contenido">
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                                     Mostrar Secciones 
                                 </button>
@@ -50,18 +51,22 @@
                                 <!-- Collect the nav links, forms, and other content for toggling -->
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav nav-justified">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Politica</a></li>
-                                    <li><a href="#">Sociedad</a></li>
-                                    <li><a href="#">Economia</a></li>
-                                    <li><a href="#">Coliseo</a></li>
-                                    <li><a href="#">Judiciales</a></li>
+                                    <li><a href="#" id="home">Home</a></li>
+                                    <li><a href="#" id="politica">Politica</a></li>
+                                    <li><a href="#" id="sociedad">Sociedad</a></li>
+                                    <li><a href="#" id="economia">Economia</a></li>
+                                    <li><a href="#" id="coliseo">Coliseo</a></li>
+                                    <li><a href="#" id="judiciales">Judiciales</a></li>
                                 </ul>
 
                                 </div><!-- /.navbar-collapse -->
                             </div><!-- /.container-fluid -->
                             </nav>
                         </div>
+                    </div>
+                    <!-- Contenido, el mismo cambiara segun en la seccion en la que nos encontremos-->
+                    <div class="row contenido">
+                        
                     </div>
                 </div>
                 <!-- Columna derecha que se oculta en xs -->
@@ -92,6 +97,8 @@
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     -->
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/navegacion.js"></script>
+    <script type="text/javascript" src="js/tabla-rest.js"></script>
+
     </body>
 </html>
