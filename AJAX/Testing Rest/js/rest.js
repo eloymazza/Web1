@@ -62,10 +62,10 @@ window.addEventListener("load",function name() {
         let objeto = { 
             "group": 8,
             "thing": {
-                "evento": "Dumbo vs Los Tres Tristes Tigres",
-                "descripcion": "Un elefante se enfrenta a tres hambrientos tigres",
-                "fecha": "Miercoles 16",
-                "hora": "10:00 hs"
+                "evento": "borrar",
+                "descripcion": "borrar",
+                "fecha": "borrar",
+                "hora": "borrar"
             },
         };
         $.ajax({
