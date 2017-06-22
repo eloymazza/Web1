@@ -78,8 +78,8 @@ window.addEventListener("load",function name() {
             "error": function () {
                     alert("Error en rest");
                 },
-        })
+        });
 
-    })
+    });
 
 });

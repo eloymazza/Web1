@@ -4,22 +4,24 @@
         <title>La voz de la Plebe</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <!--
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+         <!--
          Descomentar si no hay internet
-        -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        -->
         <link rel="stylesheet" href="css/principal.css">
-        <link rel="stylesheet" href="css/tabla-coliseo.css">
+        <link rel="stylesheet" href="css/coliseo.css">
+        <link rel="stylesheet" href="css/formulario-suscripcion.css">
+        <link rel="stylesheet" href="css/lista-crucifixiones.css">
     </head>
     <body>
     <!-- Banner con titulo de la pagina-->
     <header>
         <div class="container-fluid">
-            <div class="row">
+            <div class="row ">
                 <div class="col-md-12 hidden-xs">
-                    <img src="css/images/decoraciones/banner.png" alt="banner" class="imagen-banner image-responsive">
+                    <img src="css/images/decoraciones/banner.png" alt="banner">
                 </div>
                 <div class="col-md-12 visible-xs centrar-contenido">
                     <h1>La voz de la Plebe</h1>
@@ -33,45 +35,45 @@
             <div class="row">
                 <!-- Columna izquierda que se oculta en xs -->
                 <div class="col-sm-2 columna hidden-xs">
-                    <img src="css/images/decoraciones/columna.png" alt="columna" class="imagen-columna image-responsive">
+                    <img src="css/images/decoraciones/columna.png" alt="columna" class="imagen-columna">
                 </div>
                 <!-- Contenido de la pagina -->
                 <div class="col-sm-8">
                     <!-- Navegacion -->
                     <div class="row">
-                        <div class="col-md-12 normalizar-padding margen-superior-nav ">
+                        <div class="col-md-12 normalizar-padding margenes-nav ">
                             <nav class="navbar navbar-default centrar-contenido normalizar-color">
-                            <div class=" normalizar-padding contenedor-links">
-                                <!-- Brand and toggle get grouped for better mobile display -->
-                                <div class="navbar-header centrar-contenido">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                    Mostrar Secciones 
-                                </button>
-                                </div>
-                                <!-- Collect the nav links, forms, and other content for toggling -->
-                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <ul class="nav nav-justified">
-                                    <li><a href="#" id="home">Home</a></li>
-                                    <li><a href="#" id="politica">Politica</a></li>
-                                    <li><a href="#" id="sociedad">Sociedad</a></li>
-                                    <li><a href="#" id="economia">Economia</a></li>
-                                    <li><a href="#" id="coliseo">Coliseo</a></li>
-                                    <li><a href="#" id="judiciales">Judiciales</a></li>
-                                </ul>
+                                <div class=" normalizar-padding contenedor-links">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header centrar-contenido">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        Mostrar Secciones 
+                                    </button>
+                                    </div>
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav nav-justified">
+                                        <li><a href="#" id="home">Home</a></li>
+                                        <li><a href="#" id="politica">Politica</a></li>
+                                        <li><a href="#" id="sociedad">Sociedad</a></li>
+                                        <li><a href="#" id="economia">Economia</a></li>
+                                        <li><a href="#" id="coliseo">Coliseo</a></li>
+                                        <li><a href="#" id="judiciales">Judiciales</a></li>
+                                    </ul>
 
-                                </div><!-- /.navbar-collapse -->
-                            </div><!-- /.container-fluid -->
+                                    </div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
                             </nav>
                         </div>
                     </div>
                     <!-- Contenido, el mismo cambiara segun en la seccion en la que nos encontremos-->
-                    <div class="row contenido">
+                    <div class="contenido">
                         
                     </div>
                 </div>
                 <!-- Columna derecha que se oculta en xs -->
                 <div class="col-sm-2 columna hidden-xs">
-                    <img src="css/images/decoraciones/columna.png" alt="columna" class="imagen-columna image-responsive">
+                    <img src="css/images/decoraciones/columna.png" alt="columna" class="imagen-columna">
                 </div>
             </div>
         </div>
@@ -80,25 +82,27 @@
     <footer>
         <div class="container-fluid">
             <div class="row">
-                <div class="col md-12 hidden-xs">
-                    <img src="css/images/decoraciones/footer.png" alt="escaleras" class="imagen-footer image-responsive">
+                <div class="col md-12 hidden-xs ">
+                    <img src="css/images/decoraciones/footer.png" alt="escaleras">
+                </div>
+                <div class="col-xs-12 visible-xs footer">
+                    
                 </div>
             </div>
         </div>
     </footer>
     
     
-    <!--  Descomentar si no hay internet
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    -->
+    <!--  Descomentar si no hay internet
     <script src="js/jquery-3.2.1.min.js"></script>
-    <!-- Descomentar si no hay internet
+    -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    -->
+    <!-- Descomentar si no hay internet
     <script src="js/bootstrap.min.js"></script>
+    -->
     <script type="text/javascript" src="js/navegacion.js"></script>
     <script type="text/javascript" src="js/tabla-rest.js"></script>
-
     </body>
 </html>

@@ -184,7 +184,7 @@ $("document").ready(function() {
 
     const creditoInicial = 100;
     const costoJugada = -5;
-    const premioApuesta = 5;
+    const premioApuesta = 10;
 
     function inicializarEventHandlers(j1, j2, juego) {
         

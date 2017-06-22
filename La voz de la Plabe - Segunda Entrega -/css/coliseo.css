@@ -1,0 +1,18 @@
+.titulo-tabla{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.maximo-tabla{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.list-group-item{
+    border: 2px solid black;
+    background-color: #b67f2e; 
+}
+table, tr, .table, .cuerpo-tabla, td, th{
+    border: 2px solid black;
+}
+tr{
+    border: 4px solid black;
+}
