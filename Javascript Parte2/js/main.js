@@ -141,5 +141,34 @@ $("document").ready(function() {
 
     /* Ejercicio 6 */ 
 
+    $(".js-contar-parrafos").on("click", contarParrafos);
+    $(".js-detectar-clases").on("click", detectarClases);
     
+    function contarParrafos() {
+       let pharagraphs = $("p");
+       alert(pharagraphs.length);
+    }
+
+    function detectarClases() {
+        let ps = $("p");
+        let classArr = [];
+        let classCont = [];
+        let classOfP = "";
+        for(let p of ps){
+            classOfP = p.className;
+            if($.inArray(classOfP,classArr) == -1){
+                classArr.push(classOfP);
+                classCont.push(1);
+            }
+            else{
+                classCont[classArr.indexOf(classOfP)]++;
+            }
+        }
+        let html = "";
+        for(let i = 0; i < classCont.length; i++){
+            html+= "<tr><td>"+ classArr[i] + "</td><td>" + classCont[i] + "</td></tr>";
+        }
+        $(".js-contenedor-tabla").html(html);
+    }
+
 });

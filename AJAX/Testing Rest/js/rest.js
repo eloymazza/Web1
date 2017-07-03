@@ -65,7 +65,7 @@ window.addEventListener("load",function name() {
                 "evento": "borrar",
                 "descripcion": "borrar",
                 "fecha": "borrar",
-                "hora": "borrar"
+                "hora": "borrarj"
             },
         };
         $.ajax({
