@@ -1,0 +1,9 @@
+.centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.espacio-inferior{
+    margin-bottom: 30px;
+}
+

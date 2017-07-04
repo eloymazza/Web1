@@ -139,7 +139,7 @@ $("document").ready(function() {
 
     */ 
 
-    /* Ejercicio 6 */ 
+    /* Ejercicio 6 
 
     $(".js-contar-parrafos").on("click", contarParrafos);
     $(".js-detectar-clases").on("click", detectarClases);
@@ -170,5 +170,5 @@ $("document").ready(function() {
         }
         $(".js-contenedor-tabla").html(html);
     }
-
+    */ 
 });
