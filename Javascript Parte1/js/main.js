@@ -54,7 +54,6 @@ function crearDiv() {
    newDiv.style.height = "100px";
    newDiv.style.backgroundColor = "rgb(" + rand() + "," + rand() + "," + rand() + ")";
    newDiv.style.display = "inline-block";
-   console.log(newDiv.style.backgroundColor);
 
    document.getElementsByTagName("body")[0].appendChild(newDiv);
    
